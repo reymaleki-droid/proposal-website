@@ -69,7 +69,7 @@
 
 @media (max-width: 900px) {
   .topbar__nav {
-    display: none;
+    display: flex;
     position: absolute;
     top: 56px;
     left: 0;
@@ -77,24 +77,29 @@
     background: var(--color-bg-card);
     border-bottom: 1px solid var(--color-border);
     box-shadow: var(--shadow-lg);
-    flex-direction: column;
-    padding: var(--space-xs) 0;
-    max-height: 80vh;
-    overflow-y: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: var(--space-2xs) var(--space-xs);
+    gap: var(--space-3xs);
+    scrollbar-width: none;
   }
+  .topbar__nav::-webkit-scrollbar { display: none; }
   .topbar__nav.topbar__nav--open { display: flex; }
   .topbar__nav a {
-    padding: var(--space-s) var(--space-m);
-    font-size: var(--step-0);
-    border-radius: 0;
-    border-right: 3px solid transparent;
+    padding: var(--space-2xs) var(--space-xs);
+    font-size: var(--step--1);
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .topbar__nav a:hover,
   .topbar__nav a.active {
-    border-right-color: var(--color-accent);
+    color: var(--color-accent);
     background: var(--color-accent-light);
   }
-  .topbar__mobile-toggle { display: block; }
+  .topbar__mobile-toggle { display: none; }
 }
 
 /* ---- Reading Progress Bar ---- */
