@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -43,47 +43,54 @@
         <svg class="chart-svg" viewBox="0 0 800 320" id="maturity-chart">
           <line x1="100" y1="40" x2="100" y2="260" stroke="#E0DFDC" stroke-width="1"/>
           <line x1="100" y1="260" x2="760" y2="260" stroke="#E0DFDC" stroke-width="1"/>
-          <text x="90" y="255" text-anchor="end" fill="#7A7A78" font-size="11" font-family="Vazirmatn">سطح ۱</text>
-          <text x="90" y="210" text-anchor="end" fill="#7A7A78" font-size="11" font-family="Vazirmatn">سطح ۲</text>
-          <text x="90" y="165" text-anchor="end" fill="#7A7A78" font-size="11" font-family="Vazirmatn">سطح ۳</text>
-          <text x="90" y="120" text-anchor="end" fill="#7A7A78" font-size="11" font-family="Vazirmatn">سطح ۴</text>
-          <text x="90" y="75" text-anchor="end" fill="#7A7A78" font-size="11" font-family="Vazirmatn">سطح ۵</text>
-          <line x1="100" y1="250" x2="760" y2="250" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
-          <line x1="100" y1="205" x2="760" y2="205" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
-          <line x1="100" y1="160" x2="760" y2="160" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
-          <line x1="100" y1="115" x2="760" y2="115" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
-          <line x1="100" y1="70" x2="760" y2="70" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
-          <path d="M 140 250 L 140 250 L 270 250 L 270 205 L 400 205 L 400 115 L 530 115 L 530 115 L 530 115 L 660 115 L 660 70 L 760 70 L 760 260 L 140 260 Z" fill="url(#maturityGradient)" opacity="0.15"/>
-          <polyline points="140,250 270,250 270,205 400,205 400,115 530,115 660,115 660,70 760,70" fill="none" stroke="#2C5282" stroke-width="2.5" stroke-linejoin="round"/>
-          <circle cx="140" cy="250" r="6" fill="#6B7280"/>
-          <circle cx="270" cy="205" r="6" fill="#7C6E56"/>
+          <!-- Y-axis level labels — moved to RIGHT for RTL -->
+          <text x="710" y="255" text-anchor="start" fill="#7A7A78" font-size="11" font-family="Vazirmatn">سطح ۱</text>
+          <text x="710" y="210" text-anchor="start" fill="#7A7A78" font-size="11" font-family="Vazirmatn">سطح ۲</text>
+          <text x="710" y="165" text-anchor="start" fill="#7A7A78" font-size="11" font-family="Vazirmatn">سطح ۳</text>
+          <text x="710" y="120" text-anchor="start" fill="#7A7A78" font-size="11" font-family="Vazirmatn">سطح ۴</text>
+          <text x="710" y="75" text-anchor="start" fill="#7A7A78" font-size="11" font-family="Vazirmatn">سطح ۵</text>
+          <line x1="100" y1="250" x2="700" y2="250" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
+          <line x1="100" y1="205" x2="700" y2="205" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
+          <line x1="100" y1="160" x2="700" y2="160" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
+          <line x1="100" y1="115" x2="700" y2="115" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
+          <line x1="100" y1="70" x2="700" y2="70" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
+          <!-- Fill area — mirrored (A right, E left) -->
+          <path d="M 660 250 L 660 250 L 530 250 L 530 205 L 400 205 L 400 115 L 270 115 L 270 115 L 270 115 L 140 115 L 140 70 L 100 70 L 100 260 L 660 260 Z" fill="url(#maturityGradient)" opacity="0.15"/>
+          <!-- Polyline — mirrored -->
+          <polyline points="660,250 530,250 530,205 400,205 400,115 270,115 140,115 140,70 100,70" fill="none" stroke="#2C5282" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- Dots — mirrored positions -->
+          <circle cx="660" cy="250" r="6" fill="#6B7280"/>
+          <circle cx="530" cy="205" r="6" fill="#7C6E56"/>
           <circle cx="400" cy="115" r="6" fill="#2C5282"/>
-          <circle cx="530" cy="115" r="6" fill="#5B4FA0"/>
-          <circle cx="660" cy="70" r="6" fill="#1A6B4E"/>
-          <text x="140" y="280" text-anchor="middle" fill="#6B7280" font-size="12" font-weight="600" font-family="Vazirmatn">A</text>
-          <text x="270" y="280" text-anchor="middle" fill="#7C6E56" font-size="12" font-weight="600" font-family="Vazirmatn">B</text>
+          <circle cx="270" cy="115" r="6" fill="#5B4FA0"/>
+          <circle cx="140" cy="70" r="6" fill="#1A6B4E"/>
+          <!-- Package labels — RTL order: A rightmost, E leftmost -->
+          <text x="660" y="280" text-anchor="middle" fill="#6B7280" font-size="12" font-weight="600" font-family="Vazirmatn">A</text>
+          <text x="530" y="280" text-anchor="middle" fill="#7C6E56" font-size="12" font-weight="600" font-family="Vazirmatn">B</text>
           <text x="400" y="280" text-anchor="middle" fill="#2C5282" font-size="12" font-weight="600" font-family="Vazirmatn">C</text>
-          <text x="530" y="280" text-anchor="middle" fill="#5B4FA0" font-size="12" font-weight="600" font-family="Vazirmatn">D</text>
-          <text x="660" y="280" text-anchor="middle" fill="#1A6B4E" font-size="12" font-weight="600" font-family="Vazirmatn">E</text>
-          <text x="140" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Vazirmatn">حضور ایستا</text>
-          <text x="270" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Vazirmatn">کاتالوگ برنددار</text>
+          <text x="270" y="280" text-anchor="middle" fill="#5B4FA0" font-size="12" font-weight="600" font-family="Vazirmatn">D</text>
+          <text x="140" y="280" text-anchor="middle" fill="#1A6B4E" font-size="12" font-weight="600" font-family="Vazirmatn">E</text>
+          <text x="660" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Vazirmatn">حضور ایستا</text>
+          <text x="530" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Vazirmatn">کاتالوگ برنددار</text>
           <text x="400" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Vazirmatn">پلتفرم متصل</text>
-          <text x="530" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Vazirmatn">+مدیریت موبایلی</text>
-          <text x="660" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Vazirmatn">اکوسیستم یکپارچه</text>
-          <text x="210" y="240" fill="#4A4A48" font-size="9" font-family="Vazirmatn" font-style="italic">+ طراحی سفارشی</text>
-          <text x="310" y="150" fill="#4A4A48" font-size="9" font-family="Vazirmatn" font-style="italic">+ CRM + پنل مدیریت + API</text>
-          <text x="455" y="105" fill="#4A4A48" font-size="9" font-family="Vazirmatn" font-style="italic">+ ربات تلگرام</text>
-          <text x="580" y="60" fill="#4A4A48" font-size="9" font-family="Vazirmatn" font-style="italic">+ یکپارچه‌سازی عمیق</text>
+          <text x="270" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Vazirmatn">+مدیریت موبایلی</text>
+          <text x="140" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Vazirmatn">اکوسیستم یکپارچه</text>
+          <!-- Step annotations — mirrored -->
+          <text x="590" y="240" fill="#4A4A48" font-size="9" font-family="Vazirmatn" font-style="italic">+ طراحی سفارشی</text>
+          <text x="435" y="150" fill="#4A4A48" font-size="9" font-family="Vazirmatn" font-style="italic">+ CRM + پنل مدیریت + API</text>
+          <text x="310" y="105" fill="#4A4A48" font-size="9" font-family="Vazirmatn" font-style="italic">+ ربات تلگرام</text>
+          <text x="160" y="60" fill="#4A4A48" font-size="9" font-family="Vazirmatn" font-style="italic">+ یکپارچه‌سازی عمیق</text>
           <defs>
             <linearGradient id="maturityGradient" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#6B7280"/>
-              <stop offset="100%" stop-color="#1A6B4E"/>
+              <stop offset="0%" stop-color="#1A6B4E"/>
+              <stop offset="100%" stop-color="#6B7280"/>
             </linearGradient>
           </defs>
-          <text x="770" y="255" fill="#7A7A78" font-size="9" font-family="Vazirmatn" text-anchor="start">حضور وب ایستا</text>
-          <text x="770" y="210" fill="#7A7A78" font-size="9" font-family="Vazirmatn" text-anchor="start">کاتالوگ تعاملی</text>
-          <text x="770" y="120" fill="#7A7A78" font-size="9" font-family="Vazirmatn" text-anchor="start">پلتفرم متصل</text>
-          <text x="770" y="75" fill="#7A7A78" font-size="9" font-family="Vazirmatn" text-anchor="start">اکوسیستم یکپارچه</text>
+          <!-- Descriptive Y-axis labels — moved to LEFT for RTL -->
+          <text x="90" y="255" fill="#7A7A78" font-size="9" font-family="Vazirmatn" text-anchor="end">حضور وب ایستا</text>
+          <text x="90" y="210" fill="#7A7A78" font-size="9" font-family="Vazirmatn" text-anchor="end">کاتالوگ تعاملی</text>
+          <text x="90" y="120" fill="#7A7A78" font-size="9" font-family="Vazirmatn" text-anchor="end">پلتفرم متصل</text>
+          <text x="90" y="75" fill="#7A7A78" font-size="9" font-family="Vazirmatn" text-anchor="end">اکوسیستم یکپارچه</text>
         </svg>
         <div class="chart-container__takeaway">
           <strong>نکته کلیدی:</strong> جهش از B به C بزرگ‌ترین تغییر معماری است (وردپرس به کد سفارشی).
@@ -137,19 +144,19 @@
         <a href="package-c.html" class="card card--pkg card--pkg-c" style="text-decoration:none;">
           <div class="card__letter">C</div>
           <h5 class="card__title">کدنویسی سفارشی + CRM</h5>
-          <p class="card__subtitle">۱۰ تا ۱۴ هفته &middot; تا ۵۰۰ محصول</p>
+          <p class="card__subtitle">۳ تا ۴ هفته &middot; تا ۵۰۰ محصول</p>
           <div class="card__footer"><span class="btn btn--ghost" style="width:100%;justify-content:center;">مشاهده جزئیات</span></div>
         </a>
         <a href="package-d.html" class="card card--pkg card--pkg-d" style="text-decoration:none;">
           <div class="card__letter">D</div>
           <h5 class="card__title">ربات تلگرام</h5>
-          <p class="card__subtitle">۳ تا ۴ هفته &middot; افزونه برای C/E</p>
+          <p class="card__subtitle">+ ۱ هفته &middot; افزونه برای C/E</p>
           <div class="card__footer"><span class="btn btn--ghost" style="width:100%;justify-content:center;">مشاهده جزئیات</span></div>
         </a>
         <a href="package-e.html" class="card card--pkg card--pkg-e card--highlight" style="text-decoration:none;">
           <div class="card__letter">E</div>
           <h5 class="card__title">اکوسیستم کامل</h5>
-          <p class="card__subtitle">۱۴ تا ۲۰ هفته &middot; تا ۱۰۰۰ محصول</p>
+          <p class="card__subtitle">۴ تا ۵ هفته &middot; تا ۱۰۰۰ محصول</p>
           <div class="card__footer"><span class="btn btn--primary" style="width:100%;justify-content:center;">مشاهده جزئیات</span></div>
         </a>
       </div>
@@ -167,7 +174,7 @@
   <footer class="section" style="padding: var(--space-xl) 0; border-top: 1px solid var(--color-border-light);">
     <div class="container">
       <div class="flex flex--between flex--center flex--wrap flex--gap-s">
-        <p class="caption" style="margin:0;">پیشنهاد تهیه شده در بهمن ۱۴۰۴</p>
+        <p class="caption" style="margin:0;">پیشنهاد تهیه شده در فوریه ۲۰۲۶</p>
         <p class="caption" style="margin:0;">نسخه ۱.۰</p>
       </div>
     </div>
