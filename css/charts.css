@@ -1,0 +1,162 @@
+/* ============================================================
+   CHARTS — SVG chart styling
+   ============================================================ */
+
+.chart-container {
+  margin: var(--space-l) 0;
+  padding: var(--space-m);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius-lg);
+}
+
+.chart-container__title {
+  font-size: var(--step-0);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3xs);
+}
+
+.chart-container__purpose {
+  font-size: var(--step--1);
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-m);
+  max-width: 60ch;
+}
+
+.chart-container__takeaway {
+  font-size: var(--step--1);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-m);
+  padding-top: var(--space-s);
+  border-top: 1px solid var(--color-border-light);
+  font-style: italic;
+}
+
+.chart-container__takeaway strong {
+  font-style: normal;
+  color: var(--color-text-primary);
+}
+
+.chart-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Chart colors */
+.chart-fill-a { fill: var(--color-pkg-a); }
+.chart-fill-b { fill: var(--color-pkg-b); }
+.chart-fill-c { fill: var(--color-pkg-c); }
+.chart-fill-d { fill: var(--color-pkg-d); }
+.chart-fill-e { fill: var(--color-pkg-e); }
+
+.chart-fill-a-light { fill: var(--color-pkg-a-light); }
+.chart-fill-b-light { fill: var(--color-pkg-b-light); }
+.chart-fill-c-light { fill: var(--color-pkg-c-light); }
+.chart-fill-d-light { fill: var(--color-pkg-d-light); }
+.chart-fill-e-light { fill: var(--color-pkg-e-light); }
+
+/* Legend */
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  margin-top: var(--space-s);
+  justify-content: center;
+}
+
+.chart-legend__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-size: var(--step--1);
+  color: var(--color-text-secondary);
+}
+
+.chart-legend__swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Stacked bar specific */
+.stacked-bar rect {
+  transition: opacity var(--transition-fast);
+}
+
+.stacked-bar:hover rect {
+  opacity: 0.85;
+}
+
+/* Heatmap chart */
+.heatmap-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 3px;
+}
+
+.heatmap-table th,
+.heatmap-table td {
+  text-align: center;
+  padding: var(--space-xs);
+  font-size: var(--step--1);
+  border: none;
+}
+
+.heatmap-table th {
+  background: transparent;
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+  position: static;
+}
+
+.heatmap-table td {
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  position: relative;
+}
+
+.heatmap-table td[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-bg-dark);
+  color: var(--color-text-inverse);
+  font-size: 0.7rem;
+  padding: var(--space-2xs) var(--space-xs);
+  border-radius: var(--border-radius);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* Scatter Plot */
+.scatter-quadrant {
+  fill: none;
+  stroke: var(--color-border-light);
+  stroke-dasharray: 6 4;
+}
+
+.scatter-point {
+  cursor: default;
+  transition: r var(--transition-fast);
+}
+
+.scatter-label {
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--color-text-primary);
+}
+
+/* Maturity Steps */
+.maturity-step {
+  transition: opacity var(--transition-fast);
+}
+
+.maturity-annotation {
+  font-size: 11px;
+  fill: var(--color-text-secondary);
+}

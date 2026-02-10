@@ -1,0 +1,79 @@
+/* ============================================================
+   DESIGN TOKENS — Proposal-as-a-Website
+   Typography: Major Third (1.25) fluid scale
+   Spacing: Utopia-style T-shirt sizes
+   ============================================================ */
+
+:root {
+  /* ---- Color Palette ---- */
+  --color-bg-primary: #FAFAF9;
+  --color-bg-secondary: #F3F2EF;
+  --color-bg-dark: #1A1A1A;
+  --color-bg-card: #FFFFFF;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #4A4A48;
+  --color-text-tertiary: #7A7A78;
+  --color-text-inverse: #FAFAF9;
+  --color-border: #E0DFDC;
+  --color-border-light: #EEEDEA;
+  --color-accent: #2C5282;
+  --color-accent-hover: #1E3A5F;
+  --color-accent-light: #EBF0F7;
+
+  /* Package identity colors */
+  --color-pkg-a: #6B7280;
+  --color-pkg-b: #7C6E56;
+  --color-pkg-c: #2C5282;
+  --color-pkg-d: #5B4FA0;
+  --color-pkg-e: #1A6B4E;
+
+  --color-pkg-a-light: #F3F4F6;
+  --color-pkg-b-light: #F5F0E8;
+  --color-pkg-c-light: #EBF0F7;
+  --color-pkg-d-light: #F0EDF8;
+  --color-pkg-e-light: #E8F5EF;
+
+  /* Risk heatmap */
+  --color-risk-low: #D1E7DD;
+  --color-risk-med: #FFF3CD;
+  --color-risk-high: #F8D7DA;
+  --color-risk-crit: #C62828;
+
+  /* ---- Typography Scale (Major Third 1.25) ---- */
+  --step--1: clamp(0.80rem, 0.77rem + 0.14vw, 0.83rem);
+  --step-0:  clamp(1.00rem, 0.96rem + 0.18vw, 1.05rem);
+  --step-1:  clamp(1.25rem, 1.19rem + 0.27vw, 1.31rem);
+  --step-2:  clamp(1.56rem, 1.48rem + 0.39vw, 1.64rem);
+  --step-3:  clamp(1.95rem, 1.83rem + 0.56vw, 2.05rem);
+  --step-4:  clamp(2.44rem, 2.27rem + 0.80vw, 2.56rem);
+  --step-5:  clamp(3.05rem, 2.82rem + 1.10vw, 3.20rem);
+
+  /* ---- Spacing (Fluid T-shirt Sizes) ---- */
+  --space-3xs: clamp(0.25rem, 0.23rem + 0.09vw, 0.31rem);
+  --space-2xs: clamp(0.50rem, 0.46rem + 0.18vw, 0.63rem);
+  --space-xs:  clamp(0.75rem, 0.70rem + 0.27vw, 0.94rem);
+  --space-s:   clamp(1.00rem, 0.93rem + 0.36vw, 1.25rem);
+  --space-m:   clamp(1.50rem, 1.39rem + 0.54vw, 1.88rem);
+  --space-l:   clamp(2.00rem, 1.86rem + 0.71vw, 2.50rem);
+  --space-xl:  clamp(3.00rem, 2.79rem + 1.07vw, 3.75rem);
+  --space-2xl: clamp(4.00rem, 3.71rem + 1.43vw, 5.00rem);
+  --space-3xl: clamp(6.00rem, 5.57rem + 2.14vw, 7.50rem);
+
+  /* ---- Layout ---- */
+  --max-width: 1200px;
+  --reading-width: 720px;
+  --grid-columns: 12;
+  --grid-gap: var(--space-m);
+  --border-radius: 4px;
+  --border-radius-lg: 8px;
+
+  /* ---- Motion ---- */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-smooth: 300ms ease-out;
+
+  /* ---- Shadows ---- */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,0.10);
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Platform Proposal — IT Equipment, Network Infrastructure & CCTV</title>
+  <meta name="description" content="A structured proposal for building a scalable web platform for IT equipment, network infrastructure, and CCTV product catalog management.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/charts.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a href="index.html" class="topbar__brand">Proposal</a>
+      <ul class="topbar__nav" id="topnav">
+        <li><a href="index.html" class="active">Overview</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="architecture.html">Architecture</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="risks.html">Risks</a></li>
+        <li><a href="responsibilities.html">Your Role</a></li>
+        <li><a href="next-steps.html">Next Steps</a></li>
+      </ul>
+      <button class="topbar__mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="progress-bar" id="progress-bar"></div>
+  <div class="body-spacer"></div>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="section" style="padding-top: var(--space-3xl); padding-bottom: var(--space-2xl);">
+    <div class="container container--narrow">
+      <div data-animate>
+        <span class="section__label">Proposal</span>
+        <h1>A Web Platform for Your Product Catalog</h1>
+        <p class="lead">
+          Managing a growing catalog of IT equipment, network infrastructure, and CCTV systems
+          requires more than a static website. This document presents five structured approaches
+          to building a product platform — from rapid deployment to a fully integrated ecosystem —
+          so you can select the path that matches your operational needs.
+        </p>
+      </div>
+      <div class="stat-row mt-l" data-animate>
+        <div class="stat-item">
+          <div class="stat-item__value">5</div>
+          <div class="stat-item__label">Packages evaluated</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value">A–E</div>
+          <div class="stat-item__label">Scalability spectrum</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value">3</div>
+          <div class="stat-item__label">Product verticals covered</div>
+        </div>
+      </div>
+      <div class="flex flex--gap-s mt-l" data-animate>
+        <a href="compare.html" class="btn btn--primary btn--lg">View comparison</a>
+        <a href="packages.html" class="btn btn--secondary btn--lg">Explore packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTEXT SECTION
+       ============================================================ -->
+  <section class="section section--alt" id="context">
+    <div class="container container--narrow">
+      <div class="section__header" data-animate>
+        <span class="section__label">Context</span>
+        <h2>What This Proposal Addresses</h2>
+      </div>
+
+      <div data-animate>
+        <p>
+          You sell three categories of technical products: IT equipment (servers, workstations,
+          peripherals), network infrastructure (switches, access points, cabling, firewalls),
+          and CCTV/surveillance systems (cameras, NVRs, access control). Each category has
+          distinct specification requirements, buyer profiles, and catalog management demands.
+        </p>
+        <p>
+          Your website must serve as both a product discovery tool for potential customers and
+          an operational asset for your team — enabling product additions, specification updates,
+          and inquiry management without bottlenecks.
+        </p>
+      </div>
+
+      <h4 class="mt-l" data-animate>Operational Goals</h4>
+      <ul data-animate>
+        <li>Products browsable by category, specification, and use case with accurate, current information</li>
+        <li>Adding or updating a product takes minutes, not hours</li>
+        <li>Client inquiries route to the right person with full product context</li>
+        <li>The website reflects current inventory and capabilities, not a frozen snapshot</li>
+        <li>Routine content changes do not require the developer</li>
+      </ul>
+
+      <h4 class="mt-l" data-animate>Constraints Acknowledged</h4>
+      <ul data-animate>
+        <li>CRM choice affects integration scope — this proposal defines options, not assumptions</li>
+        <li>Product data quality directly affects launch timeline and catalog usability</li>
+        <li>Maintenance is ongoing, not a one-time cost — each package has a different maintenance profile</li>
+        <li>No solution is universally superior; each involves specific tradeoffs documented in this proposal</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FIVE PACKAGES OVERVIEW
+       ============================================================ -->
+  <section class="section" id="packages-overview">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <span class="section__label">Solutions</span>
+        <h2>Five Approaches, One Spectrum</h2>
+        <p class="lead">
+          Each package represents a different balance of speed, control, integration, and investment.
+          None is inherently better — each fits a specific operational profile.
+        </p>
+      </div>
+
+      <div class="grid grid--5" data-animate-stagger>
+        <!-- Package A -->
+        <div class="card card--pkg card--pkg-a">
+          <div class="card__letter">A</div>
+          <h5 class="card__title">WordPress + Ready Theme</h5>
+          <p class="card__subtitle">Rapid deployment</p>
+          <p class="card__body">
+            A professional web presence in 2–3 weeks using a pre-built WordPress theme.
+            Best for teams that need to get online quickly with a limited product catalog.
+          </p>
+          <ul class="card__list">
+            <li>Licensed premium theme</li>
+            <li>Up to 100 products</li>
+            <li>Contact form with email routing</li>
+            <li>Basic SEO configuration</li>
+          </ul>
+          <div class="card__footer">
+            <a href="package-a.html" class="btn btn--ghost">View details</a>
+          </div>
+        </div>
+
+        <!-- Package B -->
+        <div class="card card--pkg card--pkg-b">
+          <div class="card__letter">B</div>
+          <h5 class="card__title">WordPress + Custom UI</h5>
+          <p class="card__subtitle">Branded identity</p>
+          <p class="card__body">
+            A custom-designed WordPress site with unique visual identity,
+            category filtering, and structured product specifications.
+          </p>
+          <ul class="card__list">
+            <li>Custom-designed theme</li>
+            <li>Up to 200 products</li>
+            <li>Multi-level categories + filtering</li>
+            <li>Specification tables per product type</li>
+          </ul>
+          <div class="card__footer">
+            <a href="package-b.html" class="btn btn--ghost">View details</a>
+          </div>
+        </div>
+
+        <!-- Package C -->
+        <div class="card card--pkg card--pkg-c">
+          <div class="card__letter">C</div>
+          <h5 class="card__title">Custom-Coded + CRM</h5>
+          <p class="card__subtitle">Connected platform</p>
+          <p class="card__body">
+            A fully custom product catalog with admin panel, advanced search,
+            product comparison, and bi-directional CRM integration.
+          </p>
+          <ul class="card__list">
+            <li>Custom front-end and back-end</li>
+            <li>Up to 500 products</li>
+            <li>CRM integration (Bitrix24 / HubSpot / Zoho)</li>
+            <li>RESTful API layer</li>
+          </ul>
+          <div class="card__footer">
+            <a href="package-c.html" class="btn btn--ghost">View details</a>
+          </div>
+        </div>
+
+        <!-- Package D -->
+        <div class="card card--pkg card--pkg-d">
+          <div class="card__letter">D</div>
+          <h5 class="card__title">Telegram Bot Add-on</h5>
+          <p class="card__subtitle">Mobile management</p>
+          <p class="card__body">
+            A Telegram bot for adding, updating, and managing products directly
+            from mobile. Requires Package C or E as a prerequisite.
+          </p>
+          <ul class="card__list">
+            <li>Add/update products via Telegram</li>
+            <li>Publish/unpublish products</li>
+            <li>Inquiry notifications</li>
+            <li>Requires Package C or E</li>
+          </ul>
+          <div class="card__footer">
+            <a href="package-d.html" class="btn btn--ghost">View details</a>
+          </div>
+        </div>
+
+        <!-- Package E -->
+        <div class="card card--pkg card--pkg-e card--highlight">
+          <span class="badge badge--recommended">Mature choice</span>
+          <div class="card__letter">E</div>
+          <h5 class="card__title">Full Ecosystem</h5>
+          <p class="card__subtitle">Integrated operations</p>
+          <p class="card__body">
+            Custom website + deep CRM integration + Telegram bot, operating as one system.
+            Single source of truth for products, inquiries, and customer data.
+          </p>
+          <ul class="card__list">
+            <li>All Package C features</li>
+            <li>All Package D features</li>
+            <li>Deep CRM pipeline integration</li>
+            <li>Unified admin dashboard</li>
+            <li>Up to 1000 products</li>
+          </ul>
+          <div class="card__footer">
+            <a href="package-e.html" class="btn btn--primary">View details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       READING GUIDE
+       ============================================================ -->
+  <section class="section section--alt" id="reading-guide">
+    <div class="container container--narrow">
+      <div class="section__header" data-animate>
+        <span class="section__label">Navigation Guide</span>
+        <h2>How to Read This Proposal</h2>
+        <p class="lead">This proposal is structured for three audiences. Start with the path that matches your role.</p>
+      </div>
+
+      <div class="grid grid--3" data-animate-stagger>
+        <div class="card">
+          <h5 class="card__title">Owner / General Manager</h5>
+          <p class="card__subtitle">8–10 minutes</p>
+          <ul class="card__list">
+            <li>This page (executive summary)</li>
+            <li><a href="compare.html">Comparison table</a></li>
+            <li><a href="next-steps.html">Next steps</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h5 class="card__title">IT Manager</h5>
+          <p class="card__subtitle">15–20 minutes</p>
+          <ul class="card__list">
+            <li><a href="architecture.html">Architecture diagrams</a></li>
+            <li><a href="package-c.html">Package C</a> and <a href="package-e.html">Package E</a> details</li>
+            <li><a href="risks.html">Risk assessment</a></li>
+            <li><a href="compare.html">Comparison table</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h5 class="card__title">Sales Manager</h5>
+          <p class="card__subtitle">10 minutes</p>
+          <ul class="card__list">
+            <li><a href="package-d.html">Package D</a> (Telegram bot workflows)</li>
+            <li><a href="package-e.html">Package E</a> (daily operations)</li>
+            <li><a href="compare.html">Comparison (operational dimensions)</a></li>
+            <li><a href="responsibilities.html">Client responsibilities</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA
+       ============================================================ -->
+  <div class="container">
+    <div class="cta-block" data-animate>
+      <h3>Ready to compare?</h3>
+      <p>
+        The comparison page provides a single authoritative table with all five packages,
+        a maturity progression chart, and decision guidance based on your operational profile.
+      </p>
+      <a href="compare.html" class="btn btn--primary btn--lg">View full comparison</a>
+      <a href="packages.html" class="btn btn--secondary btn--lg">Explore each package</a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="section" style="padding: var(--space-xl) 0; border-top: 1px solid var(--color-border-light);">
+    <div class="container">
+      <div class="flex flex--between flex--center flex--wrap flex--gap-s">
+        <p class="caption" style="margin:0;">Proposal prepared February 2026. Valid for 60 days from date of issue.</p>
+        <p class="caption" style="margin:0;">Version 1.0</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

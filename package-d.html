@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Package D — Telegram Bot Add-on</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/charts.css"><link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="topbar"><div class="topbar__inner"><a href="index.html" class="topbar__brand">Proposal</a><ul class="topbar__nav" id="topnav"><li><a href="index.html">Overview</a></li><li><a href="packages.html" class="active">Packages</a></li><li><a href="compare.html">Compare</a></li><li><a href="architecture.html">Architecture</a></li><li><a href="timeline.html">Timeline</a></li><li><a href="risks.html">Risks</a></li><li><a href="responsibilities.html">Your Role</a></li><li><a href="next-steps.html">Next Steps</a></li></ul><button class="topbar__mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
+  <div class="progress-bar" id="progress-bar"></div>
+  <div class="body-spacer"></div>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <ul class="breadcrumb"><li><a href="index.html">Proposal</a></li><li class="breadcrumb__sep">/</li><li><a href="packages.html">Packages</a></li><li class="breadcrumb__sep">/</li><li class="breadcrumb__current">Package D</li></ul>
+
+      <div data-animate>
+        <span class="badge badge--d">Package D</span>
+        <h1 class="mt-s">Telegram Bot for Product Management</h1>
+        <p class="lead">
+          A Telegram bot connected to the website's product database, enabling your team to add,
+          update, and manage products directly from mobile without opening a browser admin panel.
+        </p>
+        <p class="caption" style="color: var(--color-pkg-d); font-weight: 600;">
+          Prerequisite: Package C or Package E must be in place.
+        </p>
+      </div>
+
+      <div class="mt-xl" data-animate>
+        <h3>Who This Is For</h3>
+        <p>
+          A sales team or product manager who needs to add, update, or manage products from mobile
+          without opening a browser admin panel. The daily workflow involves frequent product additions
+          or price changes that need to go live quickly. Requires Package C or E as a prerequisite.
+        </p>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>What Is Included</h3>
+        <ul class="scope-list scope-list--included">
+          <li>Telegram bot connected to the website's product database via API</li>
+          <li>Add new product (guided flow: name, category, specs, price, image upload)</li>
+          <li>Update product details (select product, choose field, enter new value)</li>
+          <li>Toggle product visibility (publish/unpublish)</li>
+          <li>View recent inquiries summary</li>
+          <li>Receive notification on new inquiry (with product context)</li>
+          <li>Authentication: bot access restricted to authorized Telegram user IDs</li>
+          <li>Rate limiting and input validation</li>
+          <li>Error handling with clear feedback messages</li>
+          <li>Documentation: bot command reference and usage guide</li>
+        </ul>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>What Is Excluded</h3>
+        <ul class="scope-list scope-list--excluded">
+          <li>Full admin panel replacement (bot handles common operations only)</li>
+          <li>Category management (creating/restructuring categories still via admin panel)</li>
+          <li>Batch operations (bulk import/export)</li>
+          <li>Analytics or reporting via bot</li>
+          <li>CRM management via bot (bot interacts with product database only)</li>
+          <li>Multi-bot setup (single bot instance)</li>
+          <li>Natural language processing (bot uses structured command flow, not free-text AI)</li>
+        </ul>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Key Tradeoffs</h3>
+        <div class="tradeoff-table">
+          <table>
+            <thead><tr><th>What You Gain</th><th>What You Accept</th></tr></thead>
+            <tbody>
+              <tr><td class="gain">Mobile-first product management</td><td class="accept">Limited to predefined operations (add, update, toggle, view)</td></tr>
+              <tr><td class="gain">No browser/login required for routine tasks</td><td class="accept">Complex operations still require admin panel</td></tr>
+              <tr><td class="gain">Real-time inquiry notifications</td><td class="accept">Single-channel (Telegram only)</td></tr>
+              <tr><td class="gain">Low friction for daily updates</td><td class="accept">Bot cannot handle edge cases (unusual data, large files)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Bot Workflow Example</h3>
+        <div class="diagram-block">
+          <div class="diagram-block__title">Product Addition Flow via Telegram</div>
+          <svg class="chart-svg" viewBox="0 0 700 200">
+            <!-- Flow boxes -->
+            <rect x="10" y="70" width="100" height="60" rx="6" fill="#5B4FA0" opacity="0.15" stroke="#5B4FA0" stroke-width="1.5"/>
+            <text x="60" y="97" text-anchor="middle" fill="#5B4FA0" font-size="11" font-weight="600" font-family="Inter">/addproduct</text>
+            <text x="60" y="115" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Inter">Start command</text>
+
+            <line x1="115" y1="100" x2="145" y2="100" stroke="#5B4FA0" stroke-width="1.5" marker-end="url(#arrowD)"/>
+
+            <rect x="150" y="70" width="100" height="60" rx="6" fill="#5B4FA0" opacity="0.15" stroke="#5B4FA0" stroke-width="1.5"/>
+            <text x="200" y="97" text-anchor="middle" fill="#5B4FA0" font-size="11" font-weight="600" font-family="Inter">Enter Name</text>
+            <text x="200" y="115" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Inter">Bot prompts</text>
+
+            <line x1="255" y1="100" x2="285" y2="100" stroke="#5B4FA0" stroke-width="1.5" marker-end="url(#arrowD)"/>
+
+            <rect x="290" y="70" width="100" height="60" rx="6" fill="#5B4FA0" opacity="0.15" stroke="#5B4FA0" stroke-width="1.5"/>
+            <text x="340" y="92" text-anchor="middle" fill="#5B4FA0" font-size="11" font-weight="600" font-family="Inter">Select</text>
+            <text x="340" y="107" text-anchor="middle" fill="#5B4FA0" font-size="11" font-weight="600" font-family="Inter">Category</text>
+            <text x="340" y="122" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Inter">Inline buttons</text>
+
+            <line x1="395" y1="100" x2="425" y2="100" stroke="#5B4FA0" stroke-width="1.5" marker-end="url(#arrowD)"/>
+
+            <rect x="430" y="70" width="100" height="60" rx="6" fill="#5B4FA0" opacity="0.15" stroke="#5B4FA0" stroke-width="1.5"/>
+            <text x="480" y="92" text-anchor="middle" fill="#5B4FA0" font-size="11" font-weight="600" font-family="Inter">Add Specs</text>
+            <text x="480" y="107" text-anchor="middle" fill="#5B4FA0" font-size="11" font-weight="600" font-family="Inter">+ Price</text>
+            <text x="480" y="122" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Inter">Guided input</text>
+
+            <line x1="535" y1="100" x2="565" y2="100" stroke="#5B4FA0" stroke-width="1.5" marker-end="url(#arrowD)"/>
+
+            <rect x="570" y="70" width="110" height="60" rx="6" fill="#1A6B4E" opacity="0.15" stroke="#1A6B4E" stroke-width="1.5"/>
+            <text x="625" y="92" text-anchor="middle" fill="#1A6B4E" font-size="11" font-weight="700" font-family="Inter">Published</text>
+            <text x="625" y="107" text-anchor="middle" fill="#1A6B4E" font-size="11" font-weight="600" font-family="Inter">to Website</text>
+            <text x="625" y="122" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Inter">Confirmation sent</text>
+
+            <defs><marker id="arrowD" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5B4FA0"/></marker></defs>
+          </svg>
+          <div class="diagram-block__caption">The bot guides the user through each field sequentially. At each step, input is validated before proceeding. The product is saved to the database and appears on the website immediately.</div>
+        </div>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Delivery Phases</h3>
+        <ul class="phase-timeline">
+          <li><span class="phase-name">Bot requirements and flow design</span><br><span class="phase-duration">2–3 days</span></li>
+          <li><span class="phase-name">API endpoint extensions (if needed)</span><br><span class="phase-duration">2–3 days</span></li>
+          <li><span class="phase-name">Bot development</span><br><span class="phase-duration">5–7 days</span></li>
+          <li><span class="phase-name">Authentication and security</span><br><span class="phase-duration">2–3 days</span></li>
+          <li><span class="phase-name">Testing with client team</span><br><span class="phase-duration">3–5 days</span></li>
+          <li><span class="phase-name">Documentation and training</span><br><span class="phase-duration">1–2 days</span></li>
+        </ul>
+        <div class="stat-row mt-m">
+          <div class="stat-item"><div class="stat-item__value">3–4</div><div class="stat-item__label">Weeks total (runs parallel to or after C/E)</div></div>
+        </div>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Dependencies</h3>
+        <ul>
+          <li>Package C or E must be in development or delivered</li>
+          <li>Client must have Telegram accounts for authorized users</li>
+          <li>Product database API must be operational</li>
+        </ul>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Maintenance Model</h3>
+        <p>
+          Bot monitoring (uptime, error logging). Telegram API compatibility updates as needed.
+          Command additions scoped separately.
+        </p>
+      </div>
+
+      <div class="cta-block mt-xl" data-animate>
+        <h3>Package D extends C into mobile operations</h3>
+        <p>For the fully integrated version with CRM-connected bot, see Package E.</p>
+        <a href="compare.html" class="btn btn--primary">Compare packages</a>
+        <a href="package-e.html" class="btn btn--secondary">Next: Package E</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section" style="padding: var(--space-xl) 0; border-top: 1px solid var(--color-border-light);"><div class="container"><div class="flex flex--between flex--center flex--wrap flex--gap-s"><p class="caption" style="margin:0;">Proposal prepared February 2026</p><p class="caption" style="margin:0;">Version 1.0</p></div></div></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

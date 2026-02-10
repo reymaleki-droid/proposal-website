@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Package E — Full Ecosystem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/charts.css"><link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="topbar"><div class="topbar__inner"><a href="index.html" class="topbar__brand">Proposal</a><ul class="topbar__nav" id="topnav"><li><a href="index.html">Overview</a></li><li><a href="packages.html" class="active">Packages</a></li><li><a href="compare.html">Compare</a></li><li><a href="architecture.html">Architecture</a></li><li><a href="timeline.html">Timeline</a></li><li><a href="risks.html">Risks</a></li><li><a href="responsibilities.html">Your Role</a></li><li><a href="next-steps.html">Next Steps</a></li></ul><button class="topbar__mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
+  <div class="progress-bar" id="progress-bar"></div>
+  <div class="body-spacer"></div>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <ul class="breadcrumb"><li><a href="index.html">Proposal</a></li><li class="breadcrumb__sep">/</li><li><a href="packages.html">Packages</a></li><li class="breadcrumb__sep">/</li><li class="breadcrumb__current">Package E</li></ul>
+
+      <div data-animate>
+        <span class="badge badge--e">Package E</span>
+        <span class="badge badge--recommended" style="margin-left: var(--space-2xs);">Mature choice</span>
+        <h1 class="mt-s">Full Ecosystem</h1>
+        <p class="lead">
+          Custom website + deep CRM integration + Telegram bot, operating as one unified system.
+          A single source of truth for products, inquiries, and customer data — managed from
+          the admin panel, from Telegram, or both.
+        </p>
+      </div>
+
+      <div class="mt-xl" data-animate>
+        <h3>Who This Is For</h3>
+        <p>
+          A business that treats its product catalog as a core operational asset, not a marketing supplement.
+          Has 300+ products across IT equipment, networking, and CCTV. Wants a single integrated system
+          where the website, CRM, and product management tool work as one. Has multiple team members
+          involved in different aspects. Plans to grow the catalog and sales operation significantly.
+        </p>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>What Is Included</h3>
+        <h5 class="mt-m">Everything in Package C, plus:</h5>
+        <ul class="scope-list scope-list--included">
+          <li>All Package C features (custom website, admin panel, API, CRM integration)</li>
+          <li>All Package D features (Telegram bot for product management)</li>
+        </ul>
+
+        <h5 class="mt-m">Deep CRM Integration</h5>
+        <ul class="scope-list scope-list--included">
+          <li>Inquiry to CRM lead creation (automatic, with full product context)</li>
+          <li>Lead status reflected on admin panel (inquiry status tracking)</li>
+          <li>Customer interaction history accessible from admin panel</li>
+          <li>Product interest analytics (which products generate most inquiries, by period)</li>
+        </ul>
+
+        <h5 class="mt-m">Extended Telegram Bot</h5>
+        <ul class="scope-list scope-list--included">
+          <li>All Package D bot features</li>
+          <li>View CRM lead summary per product</li>
+          <li>Daily digest: new inquiries, pending follow-ups, low-stock alerts (if stock data connected)</li>
+          <li>Quick-reply to customer inquiry via bot (creates CRM note)</li>
+        </ul>
+
+        <h5 class="mt-m">Unified Admin Dashboard</h5>
+        <ul class="scope-list scope-list--included">
+          <li>Product management</li>
+          <li>Inquiry pipeline (synced with CRM)</li>
+          <li>Basic analytics: inquiry volume by product/category, traffic sources, conversion funnel</li>
+          <li>Team activity log</li>
+        </ul>
+
+        <h5 class="mt-m">Data Integrity Layer</h5>
+        <ul class="scope-list scope-list--included">
+          <li>Single source of truth: product data in one database, served to website, synced to CRM, managed via admin + bot</li>
+          <li>Conflict resolution: last-write-wins with edit history log</li>
+          <li>Scheduled sync health checks with alert on failure</li>
+          <li>Up to 1000 initial products entered</li>
+          <li>120-day post-launch stabilization window</li>
+        </ul>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>What Is Excluded</h3>
+        <ul class="scope-list scope-list--excluded">
+          <li>E-commerce / payment processing</li>
+          <li>Multi-language (can be added)</li>
+          <li>Automated supplier feed import (can be scoped)</li>
+          <li>Native mobile application</li>
+          <li>CRM internal customization (workflows, automation rules inside CRM)</li>
+          <li>AI-powered product recommendations</li>
+          <li>Chat integration beyond Telegram</li>
+        </ul>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Key Tradeoffs</h3>
+        <div class="tradeoff-table">
+          <table>
+            <thead><tr><th>What You Gain</th><th>What You Accept</th></tr></thead>
+            <tbody>
+              <tr><td class="gain">Fully integrated ecosystem: one data entry, everywhere updated</td><td class="accept">Longest build cycle (14–20 weeks)</td></tr>
+              <tr><td class="gain">Operational maturity: inquiry tracking, follow-up, analytics</td><td class="accept">Highest upfront investment</td></tr>
+              <tr><td class="gain">Mobile product management via Telegram</td><td class="accept">System complexity requires documented processes and designated admin</td></tr>
+              <tr><td class="gain">CRM-connected inquiry pipeline</td><td class="accept">CRM selection and configuration is a dependency</td></tr>
+              <tr><td class="gain">Single source of truth for product data</td><td class="accept">More components = more maintenance touchpoints</td></tr>
+              <tr><td class="gain">Scalable to 5000+ products</td><td class="accept">Requires structured product data upfront</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Delivery Phases</h3>
+        <ul class="phase-timeline">
+          <li><span class="phase-name">Discovery &amp; ecosystem architecture</span><br><span class="phase-duration">1–2 weeks</span></li>
+          <li><span class="phase-name">Information architecture &amp; wireframes</span><br><span class="phase-duration">1 week</span></li>
+          <li><span class="phase-name">Visual design</span><br><span class="phase-duration">1–2 weeks</span></li>
+          <li><span class="phase-name">Back-end: database, API, admin panel</span><br><span class="phase-duration">4–5 weeks</span></li>
+          <li><span class="phase-name">Front-end development</span><br><span class="phase-duration">3–4 weeks (parallel with late back-end)</span></li>
+          <li><span class="phase-name">CRM integration: deep sync, pipeline, analytics</span><br><span class="phase-duration">2–3 weeks</span></li>
+          <li><span class="phase-name">Telegram bot development</span><br><span class="phase-duration">2–3 weeks (parallel with CRM)</span></li>
+          <li><span class="phase-name">Integration testing: end-to-end data flow</span><br><span class="phase-duration">1–2 weeks</span></li>
+          <li><span class="phase-name">Content entry &amp; data migration</span><br><span class="phase-duration">1–2 weeks</span></li>
+          <li><span class="phase-name">QA, performance, security</span><br><span class="phase-duration">1–2 weeks</span></li>
+          <li><span class="phase-name">Staging review with client</span><br><span class="phase-duration">1 week</span></li>
+          <li><span class="phase-name">Launch &amp; stabilization</span><br><span class="phase-duration">2 weeks</span></li>
+        </ul>
+        <div class="stat-row mt-m">
+          <div class="stat-item"><div class="stat-item__value">14–20</div><div class="stat-item__label">Weeks total</div></div>
+        </div>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Dependencies</h3>
+        <ul>
+          <li>All Package C dependencies</li>
+          <li>CRM selection finalized before Phase 1 ends</li>
+          <li>Telegram accounts for all authorized users</li>
+          <li>Product data in structured, consistent format</li>
+          <li>Client designates a project owner with authority to make decisions</li>
+          <li>Client team available for bot testing during integration testing phase</li>
+        </ul>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Maintenance Model</h3>
+        <p>
+          Monthly sync health audits (website, CRM, bot). Quarterly security patches and dependency updates.
+          CRM integration monitoring and revalidation on CRM updates. Bot compatibility maintenance.
+          Admin panel and dashboard bug fixes under SLA. Feature additions scoped and priced separately.
+          Recommended: 6-month review to assess analytics and optimize data flows.
+        </p>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Why Package E Is the Mature Choice</h3>
+        <p>
+          Package E is not the "best" package in an abstract sense. It is the appropriate choice
+          for a business that has outgrown manual processes and needs its product catalog, customer
+          pipeline, and daily operations to work as one connected system. The upfront investment
+          is higher. The build takes longer. But the result is a platform that reduces operational
+          friction every day it runs — rather than a website that creates new manual work to maintain.
+        </p>
+        <p>
+          If your product catalog is your business asset, and your team's time is spent managing
+          products, following up on inquiries, and updating information across disconnected tools,
+          Package E eliminates those disconnections at the system level.
+        </p>
+      </div>
+
+      <div class="cta-block mt-xl" data-animate>
+        <h3>Ready to evaluate?</h3>
+        <p>See how Package E compares across all dimensions, or review the system architecture in detail.</p>
+        <a href="compare.html" class="btn btn--primary btn--lg">Compare all packages</a>
+        <a href="architecture.html" class="btn btn--secondary btn--lg">View architecture</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section" style="padding: var(--space-xl) 0; border-top: 1px solid var(--color-border-light);"><div class="container"><div class="flex flex--between flex--center flex--wrap flex--gap-s"><p class="caption" style="margin:0;">Proposal prepared February 2026</p><p class="caption" style="margin:0;">Version 1.0</p></div></div></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

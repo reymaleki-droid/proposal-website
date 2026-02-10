@@ -1,0 +1,112 @@
+/* ============================================================
+   LAYOUT — Grid, containers, structural components
+   ============================================================ */
+
+/* ---- Containers ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-m);
+}
+
+.container--narrow {
+  max-width: var(--reading-width);
+}
+
+.container--wide {
+  max-width: 1400px;
+}
+
+/* ---- Sections ---- */
+.section {
+  padding: var(--space-2xl) 0;
+}
+
+.section--alt {
+  background: var(--color-bg-secondary);
+}
+
+.section--dark {
+  background: var(--color-bg-dark);
+  color: var(--color-text-inverse);
+}
+
+.section--dark h2,
+.section--dark h3,
+.section--dark h4 {
+  color: var(--color-text-inverse);
+}
+
+.section--dark .lead {
+  color: rgba(250, 250, 249, 0.7);
+}
+
+.section__header {
+  margin-bottom: var(--space-xl);
+}
+
+.section__label {
+  font-size: var(--step--1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.section--dark .section__label {
+  color: rgba(250,250,249,0.5);
+}
+
+/* ---- Grid ---- */
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+.grid--5 { grid-template-columns: repeat(5, 1fr); }
+
+@media (max-width: 1024px) {
+  .grid--5 { grid-template-columns: repeat(3, 1fr); }
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid--5, .grid--4, .grid--3, .grid--2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Flex Utilities ---- */
+.flex { display: flex; }
+.flex--wrap { flex-wrap: wrap; }
+.flex--center { align-items: center; justify-content: center; }
+.flex--between { justify-content: space-between; }
+.flex--gap-s { gap: var(--space-s); }
+.flex--gap-m { gap: var(--space-m); }
+.flex--gap-l { gap: var(--space-l); }
+
+/* ---- Page Layout with Sidenav ---- */
+.page-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 0;
+  min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Main Content ---- */
+.main-content {
+  min-width: 0;
+}

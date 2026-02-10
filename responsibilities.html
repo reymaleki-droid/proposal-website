@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Role — Web Platform Proposal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/charts.css"><link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="topbar"><div class="topbar__inner"><a href="index.html" class="topbar__brand">Proposal</a><ul class="topbar__nav" id="topnav"><li><a href="index.html">Overview</a></li><li><a href="packages.html">Packages</a></li><li><a href="compare.html">Compare</a></li><li><a href="architecture.html">Architecture</a></li><li><a href="timeline.html">Timeline</a></li><li><a href="risks.html">Risks</a></li><li><a href="responsibilities.html" class="active">Your Role</a></li><li><a href="next-steps.html">Next Steps</a></li></ul><button class="topbar__mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
+  <div class="progress-bar" id="progress-bar"></div>
+  <div class="body-spacer"></div>
+
+  <section class="section">
+    <div class="container">
+      <ul class="breadcrumb"><li><a href="index.html">Proposal</a></li><li class="breadcrumb__sep">/</li><li class="breadcrumb__current">Your Role</li></ul>
+
+      <div class="section__header" data-animate>
+        <span class="section__label">Client Responsibilities</span>
+        <h1>What We Need From Your Team</h1>
+        <p class="lead">
+          A successful delivery requires specific inputs, approvals, and coordination from your side.
+          This page outlines exactly what is needed, when, and from whom.
+        </p>
+      </div>
+
+      <!-- DELIVERABLES CHECKLIST -->
+      <div class="mt-l" data-animate>
+        <h2>Required Deliverables</h2>
+        <p>These materials must be provided by your team before or during the project.</p>
+
+        <div class="comparison-wrap mt-m">
+          <table class="comparison-table" style="min-width:700px;">
+            <thead>
+              <tr>
+                <th>Deliverable</th>
+                <th>Description</th>
+                <th>When Needed</th>
+                <th>Required For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Product catalog data</strong></td>
+                <td>Complete list of products with names, categories, specifications, and pricing. Provided as spreadsheet or structured format.</td>
+                <td>Discovery phase</td>
+                <td>All packages</td>
+              </tr>
+              <tr>
+                <td><strong>Product images</strong></td>
+                <td>High-resolution product photos. Minimum 800x600px, consistent background preferred. At least 1 image per product.</td>
+                <td>Content phase</td>
+                <td>All packages</td>
+              </tr>
+              <tr>
+                <td><strong>Brand assets</strong></td>
+                <td>Logo (SVG or high-res PNG), brand colors, any existing brand guidelines.</td>
+                <td>Discovery phase</td>
+                <td>All packages</td>
+              </tr>
+              <tr>
+                <td><strong>Company information</strong></td>
+                <td>About text, contact details, addresses, social media links, legal/registration information.</td>
+                <td>Content phase</td>
+                <td>All packages</td>
+              </tr>
+              <tr>
+                <td><strong>Product categories</strong></td>
+                <td>Agreed taxonomy for IT equipment, network infrastructure, and CCTV systems. Include sub-categories.</td>
+                <td>Discovery phase</td>
+                <td>All packages</td>
+              </tr>
+              <tr>
+                <td><strong>Hosting credentials</strong></td>
+                <td>Access to hosting account (cPanel for A/B, VPS access for C/E), domain registrar.</td>
+                <td>Build phase</td>
+                <td>All packages</td>
+              </tr>
+              <tr>
+                <td><strong>CRM credentials</strong></td>
+                <td>Admin access to CRM platform. API keys, webhook URLs, user permissions.</td>
+                <td>Build phase</td>
+                <td>C, E only</td>
+              </tr>
+              <tr>
+                <td><strong>Telegram bot token</strong></td>
+                <td>Bot created via @BotFather. Token and admin Telegram accounts provided.</td>
+                <td>Build phase</td>
+                <td>D, E only</td>
+              </tr>
+              <tr>
+                <td><strong>Staff contact list</strong></td>
+                <td>Names and roles for inquiry routing (sales, technical, general). Required for notification setup.</td>
+                <td>Build phase</td>
+                <td>C, D, E</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- APPROVAL CHECKPOINTS -->
+      <div class="mt-xl" data-animate>
+        <h2>Approval Checkpoints</h2>
+        <p>
+          At each checkpoint, we present deliverables for review. Your team has a <strong>3 business day</strong>
+          response window. Delayed responses shift all subsequent milestones by the same duration.
+        </p>
+
+        <div class="phase-timeline mt-m">
+          <div class="phase-timeline__item">
+            <div class="phase-timeline__dot" style="background: var(--color-accent)"></div>
+            <div class="phase-timeline__content">
+              <h4>Requirements Sign-off</h4>
+              <p class="caption">Review the documented requirements and confirm they accurately capture your needs.
+              This is the foundation — changes after this point may affect timeline and scope.</p>
+              <p class="caption"><strong>Who approves:</strong> Owner / GM</p>
+            </div>
+          </div>
+          <div class="phase-timeline__item">
+            <div class="phase-timeline__dot" style="background: var(--color-accent)"></div>
+            <div class="phase-timeline__content">
+              <h4>Design Approval</h4>
+              <p class="caption">Review wireframes and visual mockups. Two revision rounds are included for B, C, and E.
+              Approval means the visual direction is locked. Not applicable for Package A.</p>
+              <p class="caption"><strong>Who approves:</strong> Owner / GM + Sales Manager</p>
+            </div>
+          </div>
+          <div class="phase-timeline__item">
+            <div class="phase-timeline__dot" style="background: var(--color-accent)"></div>
+            <div class="phase-timeline__content">
+              <h4>Alpha Review</h4>
+              <p class="caption">Core features demonstrated on staging environment. Test product listing, filtering,
+              and inquiry flow. Report issues within the response window.</p>
+              <p class="caption"><strong>Who approves:</strong> IT Manager + Sales Manager</p>
+            </div>
+          </div>
+          <div class="phase-timeline__item">
+            <div class="phase-timeline__dot" style="background: var(--color-accent)"></div>
+            <div class="phase-timeline__content">
+              <h4>Content Approval</h4>
+              <p class="caption">All product data loaded and displayed. Review for accuracy, categorization correctness,
+              image quality, and specification completeness.</p>
+              <p class="caption"><strong>Who approves:</strong> Sales Manager + IT Manager</p>
+            </div>
+          </div>
+          <div class="phase-timeline__item">
+            <div class="phase-timeline__dot" style="background: var(--color-accent)"></div>
+            <div class="phase-timeline__content">
+              <h4>Integration Sign-off</h4>
+              <p class="caption">CRM sync verified — test lead creation, product sync, notification routing.
+              (C and E only.) Bot commands tested end-to-end (D and E only).</p>
+              <p class="caption"><strong>Who approves:</strong> Owner / GM + IT Manager</p>
+            </div>
+          </div>
+          <div class="phase-timeline__item">
+            <div class="phase-timeline__dot" style="background: var(--color-accent)"></div>
+            <div class="phase-timeline__content">
+              <h4>Go-Live Approval</h4>
+              <p class="caption">Final sign-off on staging environment. DNS switchover proceeds only after written
+              confirmation. Post-launch monitoring for 1 week with priority support.</p>
+              <p class="caption"><strong>Who approves:</strong> Owner / GM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMMUNICATION -->
+      <div class="mt-xl" data-animate>
+        <h2>Communication Cadence</h2>
+        <div class="grid grid--2 mt-m">
+          <div class="card">
+            <h4>Weekly Updates</h4>
+            <p class="caption">Written progress report delivered every Monday morning. Includes: completed work,
+            upcoming tasks, blockers, and any decisions needed.</p>
+          </div>
+          <div class="card">
+            <h4>Feedback Channel</h4>
+            <p class="caption">Dedicated communication channel (email thread or Telegram group) for questions,
+            feedback, and file sharing. Responses expected within 1 business day for non-blocking items.</p>
+          </div>
+          <div class="card">
+            <h4>Checkpoint Meetings</h4>
+            <p class="caption">30-minute video or in-person meetings at each approval checkpoint. Scheduled 2 days
+            before the response deadline to allow for clarification.</p>
+          </div>
+          <div class="card">
+            <h4>Escalation Path</h4>
+            <p class="caption">If a blocker is unresolved for 5+ business days, the project manager escalates
+            to the Owner/GM directly. Timeline impact is documented and communicated.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHANGE REQUEST POLICY -->
+      <div class="mt-xl" data-animate>
+        <h2>Change Request Policy</h2>
+        <p>Changes after requirements sign-off are handled through a structured process.</p>
+
+        <div class="comparison-wrap mt-m">
+          <table class="comparison-table" style="min-width:600px;">
+            <thead>
+              <tr>
+                <th>Change Type</th>
+                <th>Examples</th>
+                <th>Impact</th>
+                <th>Process</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Minor content</strong></td>
+                <td>Fix typo, update phone number, swap product image</td>
+                <td>No timeline impact</td>
+                <td>Submit via feedback channel. Handled within 1 business day.</td>
+              </tr>
+              <tr>
+                <td><strong>Moderate scope</strong></td>
+                <td>Add a product category, change inquiry form fields, add a static page</td>
+                <td>+1–3 days</td>
+                <td>Documented change request. Timeline impact assessed within 24 hours. Requires written approval.</td>
+              </tr>
+              <tr>
+                <td><strong>Major scope</strong></td>
+                <td>Add new integration, change CRM vendor, add multi-language support</td>
+                <td>+1–4 weeks</td>
+                <td>Formal scope amendment. Revised timeline and cost estimate. Requires Owner/GM sign-off.</td>
+              </tr>
+              <tr>
+                <td><strong>Architectural</strong></td>
+                <td>Switch from WordPress to custom (A/B to C/E), add e-commerce capability</td>
+                <td>Project restart</td>
+                <td>Treated as a new project. Current work may not carry forward. See migration table on compare page.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="cta-block mt-xl" data-animate>
+        <h3>Ready to move forward?</h3>
+        <p>Review the next steps to begin the engagement process.</p>
+        <a href="next-steps.html" class="btn btn--primary btn--lg">Next steps</a>
+        <a href="risks.html" class="btn btn--secondary btn--lg">Review risks first</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section" style="padding: var(--space-xl) 0; border-top: 1px solid var(--color-border-light);"><div class="container"><div class="flex flex--between flex--center flex--wrap flex--gap-s"><p class="caption" style="margin:0;">Proposal prepared February 2026</p><p class="caption" style="margin:0;">Version 1.0</p></div></div></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

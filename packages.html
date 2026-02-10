@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packages — Web Platform Proposal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/charts.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="topbar"><div class="topbar__inner"><a href="index.html" class="topbar__brand">Proposal</a><ul class="topbar__nav" id="topnav"><li><a href="index.html">Overview</a></li><li><a href="packages.html" class="active">Packages</a></li><li><a href="compare.html">Compare</a></li><li><a href="architecture.html">Architecture</a></li><li><a href="timeline.html">Timeline</a></li><li><a href="risks.html">Risks</a></li><li><a href="responsibilities.html">Your Role</a></li><li><a href="next-steps.html">Next Steps</a></li></ul><button class="topbar__mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
+  <div class="progress-bar" id="progress-bar"></div>
+  <div class="body-spacer"></div>
+
+  <section class="section">
+    <div class="container">
+      <ul class="breadcrumb"><li><a href="index.html">Proposal</a></li><li class="breadcrumb__sep">/</li><li class="breadcrumb__current">Packages</li></ul>
+
+      <div class="section__header" data-animate>
+        <span class="section__label">Package Overview</span>
+        <h1>Five Packages, One Spectrum</h1>
+        <p class="lead">
+          From a rapid WordPress deployment to a fully integrated ecosystem, each package
+          represents a distinct operational profile. Review the maturity progression below,
+          then explore the package that matches your situation.
+        </p>
+      </div>
+
+      <!-- Maturity Curve Chart -->
+      <div class="chart-container" data-animate>
+        <div class="chart-container__title">Operational Maturity Progression</div>
+        <div class="chart-container__purpose">
+          Each package represents a discrete step in capability. The Y-axis defines operational maturity
+          using a 5-level rubric; the X-axis shows packages in order.
+        </div>
+        <svg class="chart-svg" viewBox="0 0 800 320" id="maturity-chart">
+          <!-- Grid lines -->
+          <line x1="100" y1="40" x2="100" y2="260" stroke="#E0DFDC" stroke-width="1"/>
+          <line x1="100" y1="260" x2="760" y2="260" stroke="#E0DFDC" stroke-width="1"/>
+          <!-- Y-axis labels -->
+          <text x="90" y="255" text-anchor="end" fill="#7A7A78" font-size="11" font-family="Inter">Level 1</text>
+          <text x="90" y="210" text-anchor="end" fill="#7A7A78" font-size="11" font-family="Inter">Level 2</text>
+          <text x="90" y="165" text-anchor="end" fill="#7A7A78" font-size="11" font-family="Inter">Level 3</text>
+          <text x="90" y="120" text-anchor="end" fill="#7A7A78" font-size="11" font-family="Inter">Level 4</text>
+          <text x="90" y="75" text-anchor="end" fill="#7A7A78" font-size="11" font-family="Inter">Level 5</text>
+          <!-- Horizontal grid -->
+          <line x1="100" y1="250" x2="760" y2="250" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
+          <line x1="100" y1="205" x2="760" y2="205" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
+          <line x1="100" y1="160" x2="760" y2="160" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
+          <line x1="100" y1="115" x2="760" y2="115" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
+          <line x1="100" y1="70" x2="760" y2="70" stroke="#EEEDEA" stroke-width="1" stroke-dasharray="4"/>
+
+          <!-- Steps (filled area) -->
+          <path d="M 140 250 L 140 250 L 270 250 L 270 205 L 400 205 L 400 115 L 530 115 L 530 115 L 530 115 L 660 115 L 660 70 L 760 70 L 760 260 L 140 260 Z"
+                fill="url(#maturityGradient)" opacity="0.15"/>
+          <!-- Step lines -->
+          <polyline points="140,250 270,250 270,205 400,205 400,115 530,115 660,115 660,70 760,70"
+                    fill="none" stroke="#2C5282" stroke-width="2.5" stroke-linejoin="round"/>
+
+          <!-- Step dots -->
+          <circle cx="140" cy="250" r="6" fill="#6B7280"/>
+          <circle cx="270" cy="205" r="6" fill="#7C6E56"/>
+          <circle cx="400" cy="115" r="6" fill="#2C5282"/>
+          <circle cx="530" cy="115" r="6" fill="#5B4FA0"/>
+          <circle cx="660" cy="70" r="6" fill="#1A6B4E"/>
+
+          <!-- X-axis labels -->
+          <text x="140" y="280" text-anchor="middle" fill="#6B7280" font-size="12" font-weight="600" font-family="Inter">A</text>
+          <text x="270" y="280" text-anchor="middle" fill="#7C6E56" font-size="12" font-weight="600" font-family="Inter">B</text>
+          <text x="400" y="280" text-anchor="middle" fill="#2C5282" font-size="12" font-weight="600" font-family="Inter">C</text>
+          <text x="530" y="280" text-anchor="middle" fill="#5B4FA0" font-size="12" font-weight="600" font-family="Inter">D</text>
+          <text x="660" y="280" text-anchor="middle" fill="#1A6B4E" font-size="12" font-weight="600" font-family="Inter">E</text>
+
+          <!-- Annotations -->
+          <text x="140" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Inter">Static presence</text>
+          <text x="270" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Inter">Branded catalog</text>
+          <text x="400" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Inter">Connected platform</text>
+          <text x="530" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Inter">+Mobile mgmt</text>
+          <text x="660" y="300" text-anchor="middle" fill="#7A7A78" font-size="9" font-family="Inter">Integrated ecosystem</text>
+
+          <!-- Annotation callouts -->
+          <text x="210" y="240" fill="#4A4A48" font-size="9" font-family="Inter" font-style="italic">+ Custom design</text>
+          <text x="310" y="150" fill="#4A4A48" font-size="9" font-family="Inter" font-style="italic">+ CRM + Admin + API</text>
+          <text x="455" y="105" fill="#4A4A48" font-size="9" font-family="Inter" font-style="italic">+ Telegram bot</text>
+          <text x="580" y="60" fill="#4A4A48" font-size="9" font-family="Inter" font-style="italic">+ Deep integration</text>
+
+          <!-- Gradient definition -->
+          <defs>
+            <linearGradient id="maturityGradient" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#6B7280"/>
+              <stop offset="100%" stop-color="#1A6B4E"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Y-axis rubric labels (right side) -->
+          <text x="770" y="255" fill="#7A7A78" font-size="9" font-family="Inter" text-anchor="start">Static web presence</text>
+          <text x="770" y="210" fill="#7A7A78" font-size="9" font-family="Inter" text-anchor="start">Interactive catalog</text>
+          <text x="770" y="120" fill="#7A7A78" font-size="9" font-family="Inter" text-anchor="start">Connected platform</text>
+          <text x="770" y="75" fill="#7A7A78" font-size="9" font-family="Inter" text-anchor="start">Integrated ecosystem</text>
+        </svg>
+        <div class="chart-container__takeaway">
+          <strong>Takeaway:</strong> The jump from B to C is the largest architectural shift (WordPress to custom code).
+          C to E is incremental integration — adding bot and deeper CRM on the same foundation.
+        </div>
+      </div>
+
+      <!-- How to choose -->
+      <div class="mt-xl" data-animate>
+        <h3>How to Choose</h3>
+        <p>There is no universally correct package. Selection depends on your operational profile.</p>
+      </div>
+
+      <div class="mt-m" data-animate>
+        <div class="decision-path">
+          <div class="decision-path__condition">"I need a website quickly. Budget is the primary constraint."</div>
+          <div class="decision-path__result">Start with <a href="package-a.html"><strong>Package A</strong></a>. Revisit in 6–12 months.</div>
+        </div>
+        <div class="decision-path">
+          <div class="decision-path__condition">"I need a professional, branded website. I can wait 5–7 weeks."</div>
+          <div class="decision-path__result">Choose <a href="package-b.html"><strong>Package B</strong></a>. Consider C if CRM is on your 12-month roadmap.</div>
+        </div>
+        <div class="decision-path">
+          <div class="decision-path__condition">"I have 200+ products and a CRM. I want a real product catalog."</div>
+          <div class="decision-path__result">Choose <a href="package-c.html"><strong>Package C</strong></a>. Add Package D later if mobile management demand emerges.</div>
+        </div>
+        <div class="decision-path">
+          <div class="decision-path__condition">"I want it all working as one system from day one."</div>
+          <div class="decision-path__result">Choose <a href="package-e.html"><strong>Package E</strong></a>. This is a system investment, not a website purchase.</div>
+        </div>
+        <div class="decision-path">
+          <div class="decision-path__condition">"I am unsure."</div>
+          <div class="decision-path__result">Start at <a href="compare.html">the comparison table</a>. Review the <a href="risks.html">risk assessment</a>. <a href="next-steps.html">Schedule a call</a> to discuss.</div>
+        </div>
+      </div>
+
+      <!-- Package detail links -->
+      <div class="grid grid--5 mt-xl" data-animate-stagger>
+        <a href="package-a.html" class="card card--pkg card--pkg-a" style="text-decoration:none;">
+          <div class="card__letter">A</div>
+          <h5 class="card__title">WordPress + Ready Theme</h5>
+          <p class="card__subtitle">2–3 weeks &middot; Up to 100 products</p>
+          <div class="card__footer"><span class="btn btn--ghost" style="width:100%;justify-content:center;">View details</span></div>
+        </a>
+        <a href="package-b.html" class="card card--pkg card--pkg-b" style="text-decoration:none;">
+          <div class="card__letter">B</div>
+          <h5 class="card__title">WordPress + Custom UI</h5>
+          <p class="card__subtitle">5–7 weeks &middot; Up to 200 products</p>
+          <div class="card__footer"><span class="btn btn--ghost" style="width:100%;justify-content:center;">View details</span></div>
+        </a>
+        <a href="package-c.html" class="card card--pkg card--pkg-c" style="text-decoration:none;">
+          <div class="card__letter">C</div>
+          <h5 class="card__title">Custom + CRM</h5>
+          <p class="card__subtitle">10–14 weeks &middot; Up to 500 products</p>
+          <div class="card__footer"><span class="btn btn--ghost" style="width:100%;justify-content:center;">View details</span></div>
+        </a>
+        <a href="package-d.html" class="card card--pkg card--pkg-d" style="text-decoration:none;">
+          <div class="card__letter">D</div>
+          <h5 class="card__title">Telegram Bot</h5>
+          <p class="card__subtitle">3–4 weeks &middot; Add-on to C/E</p>
+          <div class="card__footer"><span class="btn btn--ghost" style="width:100%;justify-content:center;">View details</span></div>
+        </a>
+        <a href="package-e.html" class="card card--pkg card--pkg-e card--highlight" style="text-decoration:none;">
+          <div class="card__letter">E</div>
+          <h5 class="card__title">Full Ecosystem</h5>
+          <p class="card__subtitle">14–20 weeks &middot; Up to 1000 products</p>
+          <div class="card__footer"><span class="btn btn--primary" style="width:100%;justify-content:center;">View details</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="cta-block" data-animate>
+      <h3>Compare all packages side by side</h3>
+      <p>A single authoritative table covering scope, integration, delivery, and risk across all five packages.</p>
+      <a href="compare.html" class="btn btn--primary btn--lg">View comparison table</a>
+    </div>
+  </div>
+
+  <footer class="section" style="padding: var(--space-xl) 0; border-top: 1px solid var(--color-border-light);">
+    <div class="container">
+      <div class="flex flex--between flex--center flex--wrap flex--gap-s">
+        <p class="caption" style="margin:0;">Proposal prepared February 2026</p>
+        <p class="caption" style="margin:0;">Version 1.0</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

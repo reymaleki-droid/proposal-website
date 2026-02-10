@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Package C — Custom-Coded Website + CRM Integration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/charts.css"><link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="topbar"><div class="topbar__inner"><a href="index.html" class="topbar__brand">Proposal</a><ul class="topbar__nav" id="topnav"><li><a href="index.html">Overview</a></li><li><a href="packages.html" class="active">Packages</a></li><li><a href="compare.html">Compare</a></li><li><a href="architecture.html">Architecture</a></li><li><a href="timeline.html">Timeline</a></li><li><a href="risks.html">Risks</a></li><li><a href="responsibilities.html">Your Role</a></li><li><a href="next-steps.html">Next Steps</a></li></ul><button class="topbar__mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
+  <div class="progress-bar" id="progress-bar"></div>
+  <div class="body-spacer"></div>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <ul class="breadcrumb"><li><a href="index.html">Proposal</a></li><li class="breadcrumb__sep">/</li><li><a href="packages.html">Packages</a></li><li class="breadcrumb__sep">/</li><li class="breadcrumb__current">Package C</li></ul>
+
+      <div data-animate>
+        <span class="badge badge--c">Package C</span>
+        <h1 class="mt-s">Custom-Coded Website + CRM</h1>
+        <p class="lead">
+          A fully custom product catalog platform with its own admin panel, advanced search and filtering,
+          product comparison, and bi-directional CRM integration. Built from scratch, no WordPress dependency.
+        </p>
+      </div>
+
+      <div class="mt-xl" data-animate>
+        <h3>Who This Is For</h3>
+        <p>
+          A business with 200+ products, organized product data, an existing or planned CRM, and a desire
+          for a website that functions as a true product catalog platform. Has technical staff or a designated
+          point person for CRM. Plans to scale product offerings over time.
+        </p>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>What Is Included</h3>
+        <ul class="scope-list scope-list--included">
+          <li>Custom front-end (no CMS dependency; modern framework)</li>
+          <li>Custom back-end with admin panel for product, category, and content management</li>
+          <li>Product catalog: multi-level categories, advanced filtering (spec, brand, category, availability), full-text search</li>
+          <li>Product specification tables (per product type schema)</li>
+          <li>Product detail pages: hero image gallery, structured spec table, related products, inquiry form, datasheet PDF link</li>
+          <li>Product comparison interface (user-selected, side-by-side, up to 4 products)</li>
+          <li>CRM integration (bi-directional): inquiries pushed as leads, product interest tracking, pipeline status</li>
+          <li>CRM options: Bitrix24, HubSpot, or Zoho CRM (others evaluated on request)</li>
+          <li>Inquiry form with product context, customer details, routing logic</li>
+          <li>Admin panel: product CRUD, category management, inquiry dashboard, basic analytics</li>
+          <li>SEO: Schema.org Product markup, dynamic sitemap, clean URLs</li>
+          <li>Performance: server-side rendering, image optimization, CDN-ready</li>
+          <li>Security: input validation, rate limiting, HTTPS, admin authentication</li>
+          <li>RESTful API layer for all product and inquiry data</li>
+          <li>Up to 500 initial products entered</li>
+          <li>90-day post-launch stabilization window</li>
+        </ul>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>What Is Excluded</h3>
+        <ul class="scope-list scope-list--excluded">
+          <li>Telegram bot integration</li>
+          <li>E-commerce / payment processing</li>
+          <li>Multi-language (can be added as extension)</li>
+          <li>Automated product import from supplier feeds (can be scoped as add-on)</li>
+          <li>Mobile application</li>
+          <li>CRM customization (client's CRM must be configured by client or CRM vendor)</li>
+          <li>Ongoing content management (training and admin panel provided)</li>
+        </ul>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Key Tradeoffs</h3>
+        <div class="tradeoff-table">
+          <table>
+            <thead><tr><th>What You Gain</th><th>What You Accept</th></tr></thead>
+            <tbody>
+              <tr><td class="gain">Full control over every feature and design element</td><td class="accept">Longer build cycle (10–14 weeks)</td></tr>
+              <tr><td class="gain">No WordPress/plugin dependency chain</td><td class="accept">Higher upfront investment</td></tr>
+              <tr><td class="gain">CRM integration creates connected workflow</td><td class="accept">CRM must be selected and configured (dependency)</td></tr>
+              <tr><td class="gain">API layer enables future integrations</td><td class="accept">Requires developer for structural changes</td></tr>
+              <tr><td class="gain">Scalable architecture for 1000+ products</td><td class="accept">Custom system requires documented maintenance process</td></tr>
+              <tr><td class="gain">Product comparison and advanced filtering</td><td class="accept">Admin panel has learning curve (training provided)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Delivery Phases</h3>
+        <ul class="phase-timeline">
+          <li><span class="phase-name">Discovery &amp; requirements</span><br><span class="phase-duration">1 week</span></li>
+          <li><span class="phase-name">Information architecture &amp; wireframes</span><br><span class="phase-duration">1 week</span></li>
+          <li><span class="phase-name">Visual design</span><br><span class="phase-duration">1–2 weeks (2 revision rounds)</span></li>
+          <li><span class="phase-name">Back-end development (database, API, admin panel)</span><br><span class="phase-duration">3–4 weeks</span></li>
+          <li><span class="phase-name">Front-end development</span><br><span class="phase-duration">2–3 weeks (parallel with late back-end)</span></li>
+          <li><span class="phase-name">CRM integration</span><br><span class="phase-duration">1–2 weeks (dependent on CRM access)</span></li>
+          <li><span class="phase-name">Content entry &amp; data migration</span><br><span class="phase-duration">1–2 weeks</span></li>
+          <li><span class="phase-name">QA, performance, security review</span><br><span class="phase-duration">1–2 weeks</span></li>
+          <li><span class="phase-name">Staging review with client</span><br><span class="phase-duration">1 week</span></li>
+          <li><span class="phase-name">Launch &amp; stabilization</span><br><span class="phase-duration">1 week</span></li>
+        </ul>
+        <div class="stat-row mt-m">
+          <div class="stat-item"><div class="stat-item__value">10–14</div><div class="stat-item__label">Weeks total</div></div>
+        </div>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Dependencies</h3>
+        <ul>
+          <li>Product data in structured format (spreadsheet or database export with consistent schema)</li>
+          <li>CRM account provisioned with API access</li>
+          <li>Brand assets (logo, colors, fonts)</li>
+          <li>Hosting environment (cloud recommended; specifications provided)</li>
+          <li>Designated client contact for CRM-side decisions</li>
+        </ul>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Maintenance Model</h3>
+        <p>
+          Quarterly security patches and dependency updates. Monthly backup verification.
+          CRM integration monitoring (sync health check). Admin panel bug fixes under SLA.
+          Feature additions scoped and priced separately.
+        </p>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>CRM Options</h3>
+        <p>Package C supports integration with the following CRMs. The integration scope is consistent across all three; only the API implementation differs.</p>
+        <table>
+          <thead><tr><th>CRM</th><th>Strengths</th><th>Consideration</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Bitrix24</strong></td><td>Self-hosted option available, broad feature set, competitive pricing</td><td>API can be complex; documentation varies in quality</td></tr>
+            <tr><td><strong>HubSpot</strong></td><td>Well-documented API, strong ecosystem, free tier available</td><td>Advanced features require paid tiers; costs scale with contacts</td></tr>
+            <tr><td><strong>Zoho CRM</strong></td><td>Affordable, part of larger Zoho suite, customizable</td><td>UI can feel dense; webhook support varies by plan</td></tr>
+          </tbody>
+        </table>
+        <p class="caption mt-s">Other CRMs can be evaluated on request. Integration scope may vary based on API capabilities.</p>
+      </div>
+
+      <div class="cta-block mt-xl" data-animate>
+        <h3>Package C is the foundation for D and E</h3>
+        <p>Adding the Telegram bot (D) or upgrading to the full ecosystem (E) extends this platform without rebuilding.</p>
+        <a href="compare.html" class="btn btn--primary">Compare packages</a>
+        <a href="package-d.html" class="btn btn--secondary">Next: Package D</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section" style="padding: var(--space-xl) 0; border-top: 1px solid var(--color-border-light);"><div class="container"><div class="flex flex--between flex--center flex--wrap flex--gap-s"><p class="caption" style="margin:0;">Proposal prepared February 2026</p><p class="caption" style="margin:0;">Version 1.0</p></div></div></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

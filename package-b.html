@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Package B — WordPress + Custom UI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/charts.css"><link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="topbar"><div class="topbar__inner"><a href="index.html" class="topbar__brand">Proposal</a><ul class="topbar__nav" id="topnav"><li><a href="index.html">Overview</a></li><li><a href="packages.html" class="active">Packages</a></li><li><a href="compare.html">Compare</a></li><li><a href="architecture.html">Architecture</a></li><li><a href="timeline.html">Timeline</a></li><li><a href="risks.html">Risks</a></li><li><a href="responsibilities.html">Your Role</a></li><li><a href="next-steps.html">Next Steps</a></li></ul><button class="topbar__mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
+  <div class="progress-bar" id="progress-bar"></div>
+  <div class="body-spacer"></div>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <ul class="breadcrumb"><li><a href="index.html">Proposal</a></li><li class="breadcrumb__sep">/</li><li><a href="packages.html">Packages</a></li><li class="breadcrumb__sep">/</li><li class="breadcrumb__current">Package B</li></ul>
+
+      <div data-animate>
+        <span class="badge badge--b">Package B</span>
+        <h1 class="mt-s">WordPress + Custom UI</h1>
+        <p class="lead">
+          A custom-designed WordPress site with unique visual identity, multi-level product categories,
+          attribute filtering, and structured specification tables. Your brand, not a template.
+        </p>
+      </div>
+
+      <div class="mt-xl" data-animate>
+        <h3>Who This Is For</h3>
+        <p>
+          A business that wants a distinctive visual identity on WordPress. Has 100–500 products.
+          Wants category-based browsing with filtering. Needs branded design but does not need
+          CRM integration or automation. Has someone on staff who can manage WordPress content regularly.
+        </p>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>What Is Included</h3>
+        <ul class="scope-list scope-list--included">
+          <li>Everything in Package A, plus:</li>
+          <li>Custom-designed WordPress theme (unique to client)</li>
+          <li>Design phase: wireframes, 2 rounds of revision, final mockups</li>
+          <li>Custom product category structure (multi-level, up to 3 levels deep)</li>
+          <li>Product filtering by category, brand, and up to 3 custom attributes</li>
+          <li>Product specification tables (structured per product type)</li>
+          <li>Product inquiry form per product (routes to designated email)</li>
+          <li>Custom header/footer with client branding</li>
+          <li>Up to 10 pages</li>
+          <li>Product entries: up to 200 products</li>
+          <li>Basic performance optimization (image compression, caching plugin)</li>
+          <li>60-day post-launch bug fix window</li>
+        </ul>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>What Is Excluded</h3>
+        <ul class="scope-list scope-list--excluded">
+          <li>CRM integration</li>
+          <li>Product import automation or bulk management tools</li>
+          <li>Telegram bot</li>
+          <li>E-commerce / payment processing</li>
+          <li>Multi-language support</li>
+          <li>Product comparison interface (side-by-side)</li>
+          <li>API endpoints for external systems</li>
+          <li>Advanced search (full-text, fuzzy matching)</li>
+          <li>Ongoing content updates beyond training</li>
+        </ul>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Key Tradeoffs</h3>
+        <div class="tradeoff-table">
+          <table>
+            <thead><tr><th>What You Gain</th><th>What You Accept</th></tr></thead>
+            <tbody>
+              <tr><td class="gain">Unique branded design</td><td class="accept">Longer design/build cycle (5–7 weeks)</td></tr>
+              <tr><td class="gain">Control over visual identity</td><td class="accept">Higher upfront cost than A</td></tr>
+              <tr><td class="gain">Better product browsing (filters, categories)</td><td class="accept">Still manual product management</td></tr>
+              <tr><td class="gain">No theme vendor dependency</td><td class="accept">Custom theme requires developer for structural changes</td></tr>
+              <tr><td class="gain">Stronger brand impression</td><td class="accept">WordPress core/plugin update management remains ongoing</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Delivery Phases</h3>
+        <ul class="phase-timeline">
+          <li><span class="phase-name">Discovery &amp; requirements</span><br><span class="phase-duration">3–5 days</span></li>
+          <li><span class="phase-name">Wireframe design</span><br><span class="phase-duration">5–7 days</span></li>
+          <li><span class="phase-name">Visual design + client review</span><br><span class="phase-duration">5–7 days (2 revision rounds)</span></li>
+          <li><span class="phase-name">Theme development</span><br><span class="phase-duration">7–10 days</span></li>
+          <li><span class="phase-name">Content entry &amp; product data</span><br><span class="phase-duration">5–7 days (dependent on data readiness)</span></li>
+          <li><span class="phase-name">QA and revision</span><br><span class="phase-duration">3–5 days</span></li>
+          <li><span class="phase-name">Launch</span><br><span class="phase-duration">1 day</span></li>
+        </ul>
+        <div class="stat-row mt-m">
+          <div class="stat-item"><div class="stat-item__value">5–7</div><div class="stat-item__label">Weeks total</div></div>
+        </div>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Dependencies</h3>
+        <ul>
+          <li>All Package A dependencies, plus:</li>
+          <li>Brand guidelines (colors, fonts, logo variations)</li>
+          <li>Product images at consistent quality</li>
+          <li>Attribute definitions per product type (what specifications to display)</li>
+        </ul>
+      </div>
+
+      <div class="mt-l" data-animate>
+        <h3>Maintenance Model</h3>
+        <p>
+          Client self-manages content. Theme structural changes require a developer.
+          Recommended: quarterly maintenance check covering plugin updates, security patches,
+          and backup verification. Priced separately.
+        </p>
+      </div>
+
+      <div class="cta-block mt-xl" data-animate>
+        <h3>Considering Package B?</h3>
+        <p>Compare against all packages, or explore the next option with CRM integration.</p>
+        <a href="compare.html" class="btn btn--primary">Compare packages</a>
+        <a href="package-c.html" class="btn btn--secondary">Next: Package C</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section" style="padding: var(--space-xl) 0; border-top: 1px solid var(--color-border-light);"><div class="container"><div class="flex flex--between flex--center flex--wrap flex--gap-s"><p class="caption" style="margin:0;">Proposal prepared February 2026</p><p class="caption" style="margin:0;">Version 1.0</p></div></div></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
