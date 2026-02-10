@@ -87,7 +87,7 @@
 .progress-bar {
   position: fixed;
   top: 56px;
-  left: 0;
+  right: 0;
   height: 2px;
   background: var(--color-accent);
   z-index: 101;
@@ -100,8 +100,8 @@
   position: sticky;
   top: 72px;
   height: calc(100vh - 72px);
-  padding: var(--space-m) var(--space-m) var(--space-m) 0;
-  border-right: 1px solid var(--color-border-light);
+  padding: var(--space-m) 0 var(--space-m) var(--space-m);
+  border-left: 1px solid var(--color-border-light);
   overflow-y: auto;
 }
 
@@ -116,19 +116,19 @@
   padding: var(--space-2xs) var(--space-s);
   font-size: var(--step--1);
   color: var(--color-text-tertiary);
-  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
   transition: all var(--transition-fast);
   font-weight: 450;
 }
 
 .sidenav__item a:hover {
   color: var(--color-text-secondary);
-  border-left-color: var(--color-border);
+  border-right-color: var(--color-border);
 }
 
 .sidenav__item a.active {
   color: var(--color-accent);
-  border-left-color: var(--color-accent);
+  border-right-color: var(--color-accent);
   font-weight: 600;
 }
 
@@ -255,7 +255,7 @@
 .card__list li {
   font-size: var(--step--1);
   padding: var(--space-3xs) 0;
-  padding-left: var(--space-m);
+  padding-right: var(--space-m);
   position: relative;
   color: var(--color-text-secondary);
 }
@@ -263,7 +263,7 @@
 .card__list li::before {
   content: '';
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0.6em;
   width: 6px;
   height: 6px;
@@ -338,7 +338,7 @@
   font-size: var(--step-0);
   font-weight: 600;
   color: var(--color-text-primary);
-  text-align: left;
+  text-align: right;
   transition: background var(--transition-fast);
 }
 
@@ -626,7 +626,7 @@
 
 .scope-list li {
   padding: var(--space-2xs) 0;
-  padding-left: var(--space-l);
+  padding-right: var(--space-l);
   position: relative;
   font-size: var(--step--1);
   color: var(--color-text-secondary);
@@ -635,7 +635,7 @@
 .scope-list--included li::before {
   content: '\2713';
   position: absolute;
-  left: 0;
+  right: 0;
   color: #2E7D32;
   font-weight: 700;
   font-size: var(--step--1);
@@ -644,7 +644,7 @@
 .scope-list--excluded li::before {
   content: '\2717';
   position: absolute;
-  left: 0;
+  right: 0;
   color: #B71C1C;
   font-weight: 700;
   font-size: var(--step--1);
@@ -661,7 +661,7 @@
 .phase-timeline::before {
   content: '';
   position: absolute;
-  left: 15px;
+  right: 15px;
   top: 0;
   bottom: 0;
   width: 2px;
@@ -669,7 +669,7 @@
 }
 
 .phase-timeline li {
-  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
   padding-bottom: var(--space-s);
   position: relative;
   margin: 0;
@@ -678,7 +678,7 @@
 .phase-timeline li::before {
   content: '';
   position: absolute;
-  left: 10px;
+  right: 10px;
   top: 6px;
   width: 12px;
   height: 12px;
@@ -766,8 +766,8 @@
 
 /* ---- Decision Tree ---- */
 .decision-path {
-  border-left: 3px solid var(--color-accent-light);
-  padding-left: var(--space-m);
+  border-right: 3px solid var(--color-accent-light);
+  padding-right: var(--space-m);
   margin-bottom: var(--space-m);
 }
 

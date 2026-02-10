@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compare Packages — Web Platform Proposal</title>
+  <title>مقایسه پکیج‌ها — پیشنهاد پلتفرم وب</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/charts.css"><link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-  <nav class="topbar"><div class="topbar__inner"><a href="index.html" class="topbar__brand">Proposal</a><ul class="topbar__nav" id="topnav"><li><a href="index.html">Overview</a></li><li><a href="packages.html">Packages</a></li><li><a href="compare.html" class="active">Compare</a></li><li><a href="architecture.html">Architecture</a></li><li><a href="timeline.html">Timeline</a></li><li><a href="risks.html">Risks</a></li><li><a href="responsibilities.html">Your Role</a></li><li><a href="next-steps.html">Next Steps</a></li></ul><button class="topbar__mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
+  <nav class="topbar"><div class="topbar__inner"><a href="index.html" class="topbar__brand">پیشنهاد</a><ul class="topbar__nav" id="topnav"><li><a href="index.html">نمای کلی</a></li><li><a href="packages.html">پکیج‌ها</a></li><li><a href="compare.html" class="active">مقایسه</a></li><li><a href="architecture.html">معماری</a></li><li><a href="timeline.html">زمان‌بندی</a></li><li><a href="risks.html">ریسک‌ها</a></li><li><a href="responsibilities.html">نقش شما</a></li><li><a href="next-steps.html">مراحل بعدی</a></li></ul><button class="topbar__mobile-toggle" id="mobile-toggle" aria-label="تغییر منوی ناوبری"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
   <div class="progress-bar" id="progress-bar"></div>
   <div class="body-spacer"></div>
 
   <section class="section">
     <div class="container">
-      <ul class="breadcrumb"><li><a href="index.html">Proposal</a></li><li class="breadcrumb__sep">/</li><li class="breadcrumb__current">Compare</li></ul>
+      <ul class="breadcrumb"><li><a href="index.html">پیشنهاد</a></li><li class="breadcrumb__sep">/</li><li class="breadcrumb__current">مقایسه</li></ul>
 
       <div class="section__header" data-animate>
-        <span class="section__label">Comparison</span>
-        <h1>Side-by-Side Package Comparison</h1>
+        <span class="section__label">مقایسه</span>
+        <h1>مقایسه کنار-به-کنار پکیج‌ها</h1>
         <p class="lead">
-          All five packages evaluated against the same dimensions.
-          Click any group header to expand or collapse attribute rows.
+          هر پنج پکیج بر اساس ابعاد یکسان ارزیابی شده‌اند.
+          روی هر سرگروه کلیک کنید تا ردیف‌های ویژگی باز یا بسته شوند.
         </p>
         <div class="flex flex--gap-s mt-m">
-          <button class="btn btn--ghost" id="toggle-all-rows" onclick="toggleAllGroups()">Show all attributes</button>
-          <button class="btn btn--ghost" id="toggle-diff" onclick="toggleDifferences()">Highlight differences</button>
+          <button class="btn btn--ghost" id="toggle-all-rows" onclick="toggleAllGroups()">نمایش همه ویژگی‌ها</button>
+          <button class="btn btn--ghost" id="toggle-diff" onclick="toggleDifferences()">برجسته‌سازی تفاوت‌ها</button>
         </div>
       </div>
 
@@ -36,293 +36,276 @@
           <thead>
             <tr>
               <th></th>
-              <th class="col-a"><div class="pkg-header" style="color:var(--color-pkg-a)">A</div><div style="font-size:0.7rem;font-weight:400;color:var(--color-text-tertiary)">WP + Theme</div></th>
-              <th class="col-b"><div class="pkg-header" style="color:var(--color-pkg-b)">B</div><div style="font-size:0.7rem;font-weight:400;color:var(--color-text-tertiary)">WP + Custom</div></th>
-              <th class="col-c"><div class="pkg-header" style="color:var(--color-pkg-c)">C</div><div style="font-size:0.7rem;font-weight:400;color:var(--color-text-tertiary)">Custom + CRM</div></th>
-              <th class="col-d"><div class="pkg-header" style="color:var(--color-pkg-d)">D</div><div style="font-size:0.7rem;font-weight:400;color:var(--color-text-tertiary)">Bot Add-on</div></th>
-              <th class="col-e"><div class="pkg-header" style="color:var(--color-pkg-e)">E</div><div style="font-size:0.7rem;font-weight:400;color:var(--color-text-tertiary)">Full Ecosystem</div></th>
+              <th class="col-a"><div class="pkg-header" style="color:var(--color-pkg-a)">A</div><div style="font-size:0.7rem;font-weight:400;color:var(--color-text-tertiary)">WP + قالب</div></th>
+              <th class="col-b"><div class="pkg-header" style="color:var(--color-pkg-b)">B</div><div style="font-size:0.7rem;font-weight:400;color:var(--color-text-tertiary)">WP + سفارشی</div></th>
+              <th class="col-c"><div class="pkg-header" style="color:var(--color-pkg-c)">C</div><div style="font-size:0.7rem;font-weight:400;color:var(--color-text-tertiary)">سفارشی + CRM</div></th>
+              <th class="col-d"><div class="pkg-header" style="color:var(--color-pkg-d)">D</div><div style="font-size:0.7rem;font-weight:400;color:var(--color-text-tertiary)">ربات افزودنی</div></th>
+              <th class="col-e"><div class="pkg-header" style="color:var(--color-pkg-e)">E</div><div style="font-size:0.7rem;font-weight:400;color:var(--color-text-tertiary)">اکوسیستم کامل</div></th>
             </tr>
           </thead>
           <tbody>
-            <!-- GROUP: Scope & Features -->
+            <!-- GROUP: دامنه و ویژگی‌ها -->
             <tr class="group-header" data-group="scope">
-              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> Scope &amp; Features</td>
+              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> دامنه و ویژگی‌ها</td>
             </tr>
-            <tr class="group-row" data-group="scope"><td>Product catalog</td><td class="col-a">Up to 100</td><td class="col-b">Up to 200</td><td class="col-c">Up to 500</td><td class="col-d">Via C/E</td><td class="col-e">Up to 1,000</td></tr>
-            <tr class="group-row" data-group="scope"><td>Product filtering</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--yes">&#x2713;</span> Basic</td><td class="col-c"><span class="check check--yes">&#x2713;</span> Advanced</td><td class="col-d">Via C/E</td><td class="col-e"><span class="check check--yes">&#x2713;</span> Advanced</td></tr>
-            <tr class="group-row" data-group="scope"><td>Full-text search</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span></td><td class="col-d">Via C/E</td><td class="col-e"><span class="check check--yes">&#x2713;</span></td></tr>
-            <tr class="group-row" data-group="scope"><td>Product comparison (side-by-side)</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span></td><td class="col-d">Via C/E</td><td class="col-e"><span class="check check--yes">&#x2713;</span></td></tr>
-            <tr class="group-row" data-group="scope"><td>Specification tables</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--yes">&#x2713;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span> Per-type</td><td class="col-d">Via C/E</td><td class="col-e"><span class="check check--yes">&#x2713;</span> Per-type</td></tr>
-            <tr class="group-row" data-group="scope"><td>Inquiry form</td><td class="col-a"><span class="check check--yes">&#x2713;</span> Basic</td><td class="col-b"><span class="check check--yes">&#x2713;</span> Per-product</td><td class="col-c"><span class="check check--yes">&#x2713;</span> With routing</td><td class="col-d">Via C/E</td><td class="col-e"><span class="check check--yes">&#x2713;</span> With routing</td></tr>
-            <tr class="group-row" data-group="scope"><td>Admin panel</td><td class="col-a">WordPress</td><td class="col-b">WordPress</td><td class="col-c"><span class="check check--yes">&#x2713;</span> Custom</td><td class="col-d">Bot only</td><td class="col-e"><span class="check check--yes">&#x2713;</span> Unified dashboard</td></tr>
-            <tr class="group-row" data-group="scope"><td>Analytics dashboard</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--partial">~</span> Basic</td><td class="col-d"><span class="check check--no">&#x2717;</span></td><td class="col-e"><span class="check check--yes">&#x2713;</span> Full</td></tr>
+            <tr class="group-row" data-group="scope"><td>کاتالوگ محصول</td><td class="col-a">تا ۱۰۰</td><td class="col-b">تا ۲۰۰</td><td class="col-c">تا ۵۰۰</td><td class="col-d">از طریق C/E</td><td class="col-e">تا ۱,۰۰۰</td></tr>
+            <tr class="group-row" data-group="scope"><td>فیلتر محصول</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--yes">&#x2713;</span> پایه</td><td class="col-c"><span class="check check--yes">&#x2713;</span> پیشرفته</td><td class="col-d">از طریق C/E</td><td class="col-e"><span class="check check--yes">&#x2713;</span> پیشرفته</td></tr>
+            <tr class="group-row" data-group="scope"><td>جستجوی متنی</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span></td><td class="col-d">از طریق C/E</td><td class="col-e"><span class="check check--yes">&#x2713;</span></td></tr>
+            <tr class="group-row" data-group="scope"><td>مقایسه محصول (کنار-به-کنار)</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span></td><td class="col-d">از طریق C/E</td><td class="col-e"><span class="check check--yes">&#x2713;</span></td></tr>
+            <tr class="group-row" data-group="scope"><td>جداول مشخصات</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--yes">&#x2713;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span> بر اساس نوع</td><td class="col-d">از طریق C/E</td><td class="col-e"><span class="check check--yes">&#x2713;</span> بر اساس نوع</td></tr>
+            <tr class="group-row" data-group="scope"><td>فرم استعلام</td><td class="col-a"><span class="check check--yes">&#x2713;</span> پایه</td><td class="col-b"><span class="check check--yes">&#x2713;</span> به ازای محصول</td><td class="col-c"><span class="check check--yes">&#x2713;</span> با مسیریابی</td><td class="col-d">از طریق C/E</td><td class="col-e"><span class="check check--yes">&#x2713;</span> با مسیریابی</td></tr>
+            <tr class="group-row" data-group="scope"><td>پنل مدیریت</td><td class="col-a">وردپرس</td><td class="col-b">وردپرس</td><td class="col-c"><span class="check check--yes">&#x2713;</span> سفارشی</td><td class="col-d">فقط ربات</td><td class="col-e"><span class="check check--yes">&#x2713;</span> داشبورد یکپارچه</td></tr>
+            <tr class="group-row" data-group="scope"><td>داشبورد تحلیلی</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--partial">~</span> پایه</td><td class="col-d"><span class="check check--no">&#x2717;</span></td><td class="col-e"><span class="check check--yes">&#x2713;</span> کامل</td></tr>
 
-            <!-- GROUP: Design & Branding -->
+            <!-- GROUP: طراحی و برندسازی -->
             <tr class="group-header" data-group="design">
-              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> Design &amp; Branding</td>
+              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> طراحی و برندسازی</td>
             </tr>
-            <tr class="group-row hidden" data-group="design"><td>Design approach</td><td class="col-a">Pre-built theme</td><td class="col-b">Custom design</td><td class="col-c">Custom design</td><td class="col-d">N/A</td><td class="col-e">Custom design</td></tr>
-            <tr class="group-row hidden" data-group="design"><td>Unique visual identity</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--yes">&#x2713;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span></td><td class="col-d">N/A</td><td class="col-e"><span class="check check--yes">&#x2713;</span></td></tr>
-            <tr class="group-row hidden" data-group="design"><td>Design revision rounds</td><td class="col-a">0</td><td class="col-b">2</td><td class="col-c">2</td><td class="col-d">N/A</td><td class="col-e">2</td></tr>
-            <tr class="group-row hidden" data-group="design"><td>Mobile responsive</td><td class="col-a"><span class="check check--partial">~</span> Theme-dep.</td><td class="col-b"><span class="check check--yes">&#x2713;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span></td><td class="col-d">N/A</td><td class="col-e"><span class="check check--yes">&#x2713;</span></td></tr>
+            <tr class="group-row hidden" data-group="design"><td>رویکرد طراحی</td><td class="col-a">قالب آماده</td><td class="col-b">طراحی سفارشی</td><td class="col-c">طراحی سفارشی</td><td class="col-d">ندارد</td><td class="col-e">طراحی سفارشی</td></tr>
+            <tr class="group-row hidden" data-group="design"><td>هویت بصری منحصربه‌فرد</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--yes">&#x2713;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span></td><td class="col-d">ندارد</td><td class="col-e"><span class="check check--yes">&#x2713;</span></td></tr>
+            <tr class="group-row hidden" data-group="design"><td>دور بازبینی طراحی</td><td class="col-a">۰</td><td class="col-b">۲</td><td class="col-c">۲</td><td class="col-d">ندارد</td><td class="col-e">۲</td></tr>
+            <tr class="group-row hidden" data-group="design"><td>ریسپانسیو موبایل</td><td class="col-a"><span class="check check--partial">~</span> وابسته به قالب</td><td class="col-b"><span class="check check--yes">&#x2713;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span></td><td class="col-d">ندارد</td><td class="col-e"><span class="check check--yes">&#x2713;</span></td></tr>
 
-            <!-- GROUP: Integration -->
+            <!-- GROUP: یکپارچه‌سازی -->
             <tr class="group-header" data-group="integration">
-              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> Integration</td>
+              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> یکپارچه‌سازی</td>
             </tr>
-            <tr class="group-row" data-group="integration"><td>CRM integration</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span> Bi-directional</td><td class="col-d"><span class="check check--no">&#x2717;</span></td><td class="col-e"><span class="check check--yes">&#x2713;</span> Deep</td></tr>
-            <tr class="group-row" data-group="integration"><td>Telegram bot</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--no">&#x2717;</span></td><td class="col-d"><span class="check check--yes">&#x2713;</span></td><td class="col-e"><span class="check check--yes">&#x2713;</span> Extended</td></tr>
-            <tr class="group-row" data-group="integration"><td>API layer</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span> RESTful</td><td class="col-d">Via C/E</td><td class="col-e"><span class="check check--yes">&#x2713;</span> RESTful</td></tr>
-            <tr class="group-row" data-group="integration"><td>Data sync monitoring</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--partial">~</span> Manual</td><td class="col-d"><span class="check check--no">&#x2717;</span></td><td class="col-e"><span class="check check--yes">&#x2713;</span> Automated</td></tr>
+            <tr class="group-row" data-group="integration"><td>یکپارچه‌سازی CRM</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span> دوطرفه</td><td class="col-d"><span class="check check--no">&#x2717;</span></td><td class="col-e"><span class="check check--yes">&#x2713;</span> عمیق</td></tr>
+            <tr class="group-row" data-group="integration"><td>ربات تلگرام</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--no">&#x2717;</span></td><td class="col-d"><span class="check check--yes">&#x2713;</span></td><td class="col-e"><span class="check check--yes">&#x2713;</span> توسعه‌یافته</td></tr>
+            <tr class="group-row" data-group="integration"><td>لایه API</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--yes">&#x2713;</span> RESTful</td><td class="col-d">از طریق C/E</td><td class="col-e"><span class="check check--yes">&#x2713;</span> RESTful</td></tr>
+            <tr class="group-row" data-group="integration"><td>نظارت همگام‌سازی داده</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--partial">~</span> دستی</td><td class="col-d"><span class="check check--no">&#x2717;</span></td><td class="col-e"><span class="check check--yes">&#x2713;</span> خودکار</td></tr>
 
-            <!-- GROUP: Product Management -->
+            <!-- GROUP: مدیریت محصول -->
             <tr class="group-header" data-group="prodmgmt">
-              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> Product Management</td>
+              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> مدیریت محصول</td>
             </tr>
-            <tr class="group-row hidden" data-group="prodmgmt"><td>Entry method</td><td class="col-a">Manual (WP)</td><td class="col-b">Manual (WP)</td><td class="col-c">Admin panel</td><td class="col-d">Telegram bot</td><td class="col-e">Admin + Bot</td></tr>
-            <tr class="group-row hidden" data-group="prodmgmt"><td>Mobile management</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--no">&#x2717;</span></td><td class="col-d"><span class="check check--yes">&#x2713;</span></td><td class="col-e"><span class="check check--yes">&#x2713;</span></td></tr>
-            <tr class="group-row hidden" data-group="prodmgmt"><td>Inquiry notifications</td><td class="col-a">Email only</td><td class="col-b">Email only</td><td class="col-c">Email + panel</td><td class="col-d"><span class="check check--yes">&#x2713;</span> Telegram</td><td class="col-e"><span class="check check--yes">&#x2713;</span> All channels</td></tr>
+            <tr class="group-row hidden" data-group="prodmgmt"><td>روش ورود داده</td><td class="col-a">دستی (WP)</td><td class="col-b">دستی (WP)</td><td class="col-c">پنل مدیریت</td><td class="col-d">ربات تلگرام</td><td class="col-e">پنل + ربات</td></tr>
+            <tr class="group-row hidden" data-group="prodmgmt"><td>مدیریت موبایلی</td><td class="col-a"><span class="check check--no">&#x2717;</span></td><td class="col-b"><span class="check check--no">&#x2717;</span></td><td class="col-c"><span class="check check--no">&#x2717;</span></td><td class="col-d"><span class="check check--yes">&#x2713;</span></td><td class="col-e"><span class="check check--yes">&#x2713;</span></td></tr>
+            <tr class="group-row hidden" data-group="prodmgmt"><td>اعلان استعلام</td><td class="col-a">فقط ایمیل</td><td class="col-b">فقط ایمیل</td><td class="col-c">ایمیل + پنل</td><td class="col-d"><span class="check check--yes">&#x2713;</span> تلگرام</td><td class="col-e"><span class="check check--yes">&#x2713;</span> تمام کانال‌ها</td></tr>
 
-            <!-- GROUP: Scalability -->
+            <!-- GROUP: مقیاس‌پذیری -->
             <tr class="group-header" data-group="scalability">
-              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> Scalability</td>
+              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> مقیاس‌پذیری</td>
             </tr>
-            <tr class="group-row hidden" data-group="scalability"><td>Product capacity</td><td class="col-a">~100</td><td class="col-b">~200–500</td><td class="col-c">1,000+</td><td class="col-d">Via C/E</td><td class="col-e">5,000+</td></tr>
-            <tr class="group-row hidden" data-group="scalability"><td>Architecture extensibility</td><td class="col-a">Plugin-limited</td><td class="col-b">Plugin-limited</td><td class="col-c">API-driven</td><td class="col-d">API-driven</td><td class="col-e">API-driven</td></tr>
+            <tr class="group-row hidden" data-group="scalability"><td>ظرفیت محصول</td><td class="col-a">~۱۰۰</td><td class="col-b">~۲۰۰–۵۰۰</td><td class="col-c">+۱,۰۰۰</td><td class="col-d">از طریق C/E</td><td class="col-e">+۵,۰۰۰</td></tr>
+            <tr class="group-row hidden" data-group="scalability"><td>توسعه‌پذیری معماری</td><td class="col-a">محدود به افزونه</td><td class="col-b">محدود به افزونه</td><td class="col-c">مبتنی بر API</td><td class="col-d">مبتنی بر API</td><td class="col-e">مبتنی بر API</td></tr>
 
-            <!-- GROUP: Maintenance -->
+            <!-- GROUP: نگهداری -->
             <tr class="group-header" data-group="maintenance">
-              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> Maintenance</td>
+              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> نگهداری</td>
             </tr>
-            <tr class="group-row hidden" data-group="maintenance"><td>Maintained by</td><td class="col-a">Client (WP)</td><td class="col-b">Client + dev</td><td class="col-c">Client + dev</td><td class="col-d">Dev</td><td class="col-e">Client + dev</td></tr>
-            <tr class="group-row hidden" data-group="maintenance"><td>Plugin/theme dependency</td><td class="col-a">High</td><td class="col-b">Medium</td><td class="col-c">None</td><td class="col-d">None</td><td class="col-e">None</td></tr>
-            <tr class="group-row hidden" data-group="maintenance"><td>Update complexity</td><td class="col-a">Low (but risky)</td><td class="col-b">Medium</td><td class="col-c">Controlled</td><td class="col-d">Low</td><td class="col-e">Controlled</td></tr>
-            <tr class="group-row hidden" data-group="maintenance"><td>Bug fix window</td><td class="col-a">30 days</td><td class="col-b">60 days</td><td class="col-c">90 days</td><td class="col-d">Per C/E</td><td class="col-e">120 days</td></tr>
+            <tr class="group-row hidden" data-group="maintenance"><td>نگهداری توسط</td><td class="col-a">مشتری (WP)</td><td class="col-b">مشتری + توسعه‌دهنده</td><td class="col-c">مشتری + توسعه‌دهنده</td><td class="col-d">توسعه‌دهنده</td><td class="col-e">مشتری + توسعه‌دهنده</td></tr>
+            <tr class="group-row hidden" data-group="maintenance"><td>وابستگی افزونه/قالب</td><td class="col-a">بالا</td><td class="col-b">متوسط</td><td class="col-c">هیچ</td><td class="col-d">هیچ</td><td class="col-e">هیچ</td></tr>
+            <tr class="group-row hidden" data-group="maintenance"><td>پیچیدگی به‌روزرسانی</td><td class="col-a">کم (اما پرریسک)</td><td class="col-b">متوسط</td><td class="col-c">کنترل‌شده</td><td class="col-d">کم</td><td class="col-e">کنترل‌شده</td></tr>
+            <tr class="group-row hidden" data-group="maintenance"><td>پنجره رفع باگ</td><td class="col-a">۳۰ روز</td><td class="col-b">۶۰ روز</td><td class="col-c">۹۰ روز</td><td class="col-d">مطابق C/E</td><td class="col-e">۱۲۰ روز</td></tr>
 
-            <!-- GROUP: Delivery -->
+            <!-- GROUP: تحویل -->
             <tr class="group-header" data-group="delivery">
-              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> Delivery</td>
+              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> تحویل</td>
             </tr>
-            <tr class="group-row" data-group="delivery"><td>Timeline</td><td class="col-a">2–3 weeks</td><td class="col-b">5–7 weeks</td><td class="col-c">10–14 weeks</td><td class="col-d">3–4 weeks</td><td class="col-e">14–20 weeks</td></tr>
-            <tr class="group-row" data-group="delivery"><td>Design phases</td><td class="col-a">0</td><td class="col-b">3</td><td class="col-c">3</td><td class="col-d">1</td><td class="col-e">3</td></tr>
-            <tr class="group-row" data-group="delivery"><td>Client involvement</td><td class="col-a">Low</td><td class="col-b">Medium</td><td class="col-c">Medium-High</td><td class="col-d">Low</td><td class="col-e">High</td></tr>
+            <tr class="group-row" data-group="delivery"><td>زمان‌بندی</td><td class="col-a">۲–۳ هفته</td><td class="col-b">۵–۷ هفته</td><td class="col-c">۱۰–۱۴ هفته</td><td class="col-d">۳–۴ هفته</td><td class="col-e">۱۴–۲۰ هفته</td></tr>
+            <tr class="group-row" data-group="delivery"><td>فازهای طراحی</td><td class="col-a">۰</td><td class="col-b">۳</td><td class="col-c">۳</td><td class="col-d">۱</td><td class="col-e">۳</td></tr>
+            <tr class="group-row" data-group="delivery"><td>مشارکت مشتری</td><td class="col-a">کم</td><td class="col-b">متوسط</td><td class="col-c">متوسط-بالا</td><td class="col-d">کم</td><td class="col-e">بالا</td></tr>
 
-            <!-- GROUP: Risk -->
+            <!-- GROUP: پروفایل ریسک -->
             <tr class="group-header" data-group="risk">
-              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> Risk Profile</td>
+              <td colspan="6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 0.2s"><polyline points="6 9 12 15 18 9"/></svg> پروفایل ریسک</td>
             </tr>
-            <tr class="group-row" data-group="risk"><td>Vendor lock-in</td><td class="col-a">Theme vendor</td><td class="col-b">WordPress</td><td class="col-c">Low</td><td class="col-d">Telegram API</td><td class="col-e">Low</td></tr>
-            <tr class="group-row" data-group="risk"><td>Security surface</td><td class="col-a">Large (WP+plugins)</td><td class="col-b">Large (WP+plugins)</td><td class="col-c">Controlled</td><td class="col-d">Controlled</td><td class="col-e">Controlled</td></tr>
-            <tr class="group-row" data-group="risk"><td>Scalability ceiling</td><td class="col-a">Low</td><td class="col-b">Medium</td><td class="col-c">High</td><td class="col-d">Via C/E</td><td class="col-e">High</td></tr>
+            <tr class="group-row" data-group="risk"><td>وابستگی به فروشنده</td><td class="col-a">فروشنده قالب</td><td class="col-b">وردپرس</td><td class="col-c">کم</td><td class="col-d">API تلگرام</td><td class="col-e">کم</td></tr>
+            <tr class="group-row" data-group="risk"><td>سطح امنیتی</td><td class="col-a">بزرگ (WP+افزونه)</td><td class="col-b">بزرگ (WP+افزونه)</td><td class="col-c">کنترل‌شده</td><td class="col-d">کنترل‌شده</td><td class="col-e">کنترل‌شده</td></tr>
+            <tr class="group-row" data-group="risk"><td>سقف مقیاس‌پذیری</td><td class="col-a">کم</td><td class="col-b">متوسط</td><td class="col-c">بالا</td><td class="col-d">از طریق C/E</td><td class="col-e">بالا</td></tr>
           </tbody>
         </table>
       </div>
 
       <!-- SCOPE STACKING CHART -->
       <div class="chart-container mt-xl" data-animate>
-        <div class="chart-container__title">Capability Scope by Package</div>
+        <div class="chart-container__title">دامنه قابلیت بر اساس پکیج</div>
         <div class="chart-container__purpose">
-          Each bar shows the total capability scope for a package. Segments represent distinct capability blocks.
-          Taller bars include more capability layers.
+          هر ستون دامنه کلی قابلیت یک پکیج را نشان می‌دهد. بخش‌ها نشان‌دهنده بلوک‌های قابلیت مجزا هستند.
+          ستون‌های بلندتر لایه‌های قابلیت بیشتری دارند.
         </div>
         <svg class="chart-svg" viewBox="0 0 800 340" id="scope-chart">
-          <!-- Y-axis -->
           <line x1="100" y1="20" x2="100" y2="280" stroke="#E0DFDC" stroke-width="1"/>
           <line x1="100" y1="280" x2="720" y2="280" stroke="#E0DFDC" stroke-width="1"/>
 
-          <!-- Bars - Package A: only Website Core -->
           <rect x="130" y="240" width="80" height="40" rx="3" fill="#6B7280" opacity="0.85"/>
-          <text x="170" y="265" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Website</text>
+          <text x="170" y="265" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">وب‌سایت</text>
 
-          <!-- Package B: Website Core + Custom Design -->
           <rect x="250" y="200" width="80" height="40" rx="0" fill="#7C6E56" opacity="0.65"/>
-          <text x="290" y="225" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Design</text>
+          <text x="290" y="225" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">طراحی</text>
           <rect x="250" y="240" width="80" height="40" rx="3" fill="#7C6E56" opacity="0.85"/>
-          <text x="290" y="265" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Website</text>
+          <text x="290" y="265" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">وب‌سایت</text>
 
-          <!-- Package C: Website + Design + CRM + Admin -->
           <rect x="370" y="120" width="80" height="40" rx="0" fill="#2C5282" opacity="0.45"/>
-          <text x="410" y="145" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">CRM</text>
+          <text x="410" y="145" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">CRM</text>
           <rect x="370" y="160" width="80" height="40" rx="0" fill="#2C5282" opacity="0.55"/>
-          <text x="410" y="185" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Admin</text>
+          <text x="410" y="185" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">پنل</text>
           <rect x="370" y="200" width="80" height="40" rx="0" fill="#2C5282" opacity="0.65"/>
-          <text x="410" y="225" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Design</text>
+          <text x="410" y="225" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">طراحی</text>
           <rect x="370" y="240" width="80" height="40" rx="3" fill="#2C5282" opacity="0.85"/>
-          <text x="410" y="265" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Website</text>
+          <text x="410" y="265" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">وب‌سایت</text>
 
-          <!-- Package D: Bot only (narrow bar) -->
           <rect x="500" y="240" width="60" height="40" rx="3" fill="#5B4FA0" opacity="0.85"/>
-          <text x="530" y="265" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Bot</text>
-          <text x="530" y="290" text-anchor="middle" fill="#7A7A78" font-size="8" font-family="Inter">(add-on)</text>
+          <text x="530" y="265" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">ربات</text>
+          <text x="530" y="290" text-anchor="middle" fill="#7A7A78" font-size="8" font-family="Vazirmatn">(افزودنی)</text>
 
-          <!-- Package E: All blocks -->
           <rect x="600" y="40" width="80" height="40" rx="0" fill="#1A6B4E" opacity="0.35"/>
-          <text x="640" y="65" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Dashboard</text>
+          <text x="640" y="65" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">داشبورد</text>
           <rect x="600" y="80" width="80" height="40" rx="0" fill="#1A6B4E" opacity="0.45"/>
-          <text x="640" y="105" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Bot</text>
+          <text x="640" y="105" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">ربات</text>
           <rect x="600" y="120" width="80" height="40" rx="0" fill="#1A6B4E" opacity="0.55"/>
-          <text x="640" y="145" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Deep CRM</text>
+          <text x="640" y="145" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">CRM عمیق</text>
           <rect x="600" y="160" width="80" height="40" rx="0" fill="#1A6B4E" opacity="0.65"/>
-          <text x="640" y="185" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Admin</text>
+          <text x="640" y="185" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">پنل</text>
           <rect x="600" y="200" width="80" height="40" rx="0" fill="#1A6B4E" opacity="0.75"/>
-          <text x="640" y="225" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Design</text>
+          <text x="640" y="225" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">طراحی</text>
           <rect x="600" y="240" width="80" height="40" rx="3" fill="#1A6B4E" opacity="0.85"/>
-          <text x="640" y="265" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Inter">Website</text>
+          <text x="640" y="265" text-anchor="middle" fill="#fff" font-size="9" font-weight="600" font-family="Vazirmatn">وب‌سایت</text>
 
-          <!-- X-axis labels -->
-          <text x="170" y="310" text-anchor="middle" fill="#6B7280" font-size="12" font-weight="600" font-family="Inter">A</text>
-          <text x="290" y="310" text-anchor="middle" fill="#7C6E56" font-size="12" font-weight="600" font-family="Inter">B</text>
-          <text x="410" y="310" text-anchor="middle" fill="#2C5282" font-size="12" font-weight="600" font-family="Inter">C</text>
-          <text x="530" y="310" text-anchor="middle" fill="#5B4FA0" font-size="12" font-weight="600" font-family="Inter">D</text>
-          <text x="640" y="310" text-anchor="middle" fill="#1A6B4E" font-size="12" font-weight="600" font-family="Inter">E</text>
+          <text x="170" y="310" text-anchor="middle" fill="#6B7280" font-size="12" font-weight="600" font-family="Vazirmatn">A</text>
+          <text x="290" y="310" text-anchor="middle" fill="#7C6E56" font-size="12" font-weight="600" font-family="Vazirmatn">B</text>
+          <text x="410" y="310" text-anchor="middle" fill="#2C5282" font-size="12" font-weight="600" font-family="Vazirmatn">C</text>
+          <text x="530" y="310" text-anchor="middle" fill="#5B4FA0" font-size="12" font-weight="600" font-family="Vazirmatn">D</text>
+          <text x="640" y="310" text-anchor="middle" fill="#1A6B4E" font-size="12" font-weight="600" font-family="Vazirmatn">E</text>
         </svg>
         <div class="chart-legend">
-          <div class="chart-legend__item"><div class="chart-legend__swatch" style="background:rgba(26,107,78,0.85)"></div>Website Core</div>
-          <div class="chart-legend__item"><div class="chart-legend__swatch" style="background:rgba(26,107,78,0.75)"></div>Custom Design</div>
-          <div class="chart-legend__item"><div class="chart-legend__swatch" style="background:rgba(26,107,78,0.65)"></div>Admin Panel</div>
-          <div class="chart-legend__item"><div class="chart-legend__swatch" style="background:rgba(26,107,78,0.55)"></div>CRM Integration</div>
-          <div class="chart-legend__item"><div class="chart-legend__swatch" style="background:rgba(26,107,78,0.45)"></div>Telegram Bot</div>
-          <div class="chart-legend__item"><div class="chart-legend__swatch" style="background:rgba(26,107,78,0.35)"></div>Unified Dashboard</div>
+          <div class="chart-legend__item"><div class="chart-legend__swatch" style="background:rgba(26,107,78,0.85)"></div>هسته وب‌سایت</div>
+          <div class="chart-legend__item"><div class="chart-legend__swatch" style="background:rgba(26,107,78,0.75)"></div>طراحی سفارشی</div>
+          <div class="chart-legend__item"><div class="chart-legend__swatch" style="background:rgba(26,107,78,0.65)"></div>پنل مدیریت</div>
+          <div class="chart-legend__item"><div class="chart-legend__swatch" style="background:rgba(26,107,78,0.55)"></div>یکپارچه‌سازی CRM</div>
+          <div class="chart-legend__item"><div class="chart-legend__swatch" style="background:rgba(26,107,78,0.45)"></div>ربات تلگرام</div>
+          <div class="chart-legend__item"><div class="chart-legend__swatch" style="background:rgba(26,107,78,0.35)"></div>داشبورد یکپارچه</div>
         </div>
         <div class="chart-container__takeaway">
-          <strong>Takeaway:</strong> Package E includes all six capability blocks. Package A includes only the website core.
-          Each step up adds a defined layer — the progression is cumulative, not replacement.
+          <strong>نکته کلیدی:</strong> پکیج E شامل هر شش بلوک قابلیت است. پکیج A فقط شامل هسته وب‌سایت است.
+          هر مرحله بالاتر یک لایه مشخص اضافه می‌کند — پیشرفت تجمعی است، نه جایگزینی.
         </div>
       </div>
 
       <!-- EFFORT VS CAPABILITY CHART -->
       <div class="chart-container mt-l" data-animate>
-        <div class="chart-container__title">Effort vs. Capability</div>
+        <div class="chart-container__title">تلاش در مقابل قابلیت</div>
         <div class="chart-container__purpose">
-          X-axis: estimated implementation effort (person-weeks). Y-axis: capability delivered (number of
-          integrated capability blocks). Quadrant thresholds set at midpoint of data range.
+          محور X: تلاش تخمینی پیاده‌سازی (نفر-هفته). محور Y: قابلیت ارائه‌شده (تعداد
+          بلوک‌های قابلیت یکپارچه). آستانه ربع‌ها در نقطه میانی بازه داده تنظیم شده.
         </div>
         <svg class="chart-svg" viewBox="0 0 800 440" id="effort-chart">
-          <!-- Axes -->
           <line x1="100" y1="20" x2="100" y2="380" stroke="#E0DFDC" stroke-width="1"/>
           <line x1="100" y1="380" x2="760" y2="380" stroke="#E0DFDC" stroke-width="1"/>
 
-          <!-- Quadrant lines -->
           <line x1="380" y1="20" x2="380" y2="380" stroke="#E0DFDC" stroke-width="1" stroke-dasharray="6 4"/>
           <line x1="100" y1="200" x2="760" y2="200" stroke="#E0DFDC" stroke-width="1" stroke-dasharray="6 4"/>
 
-          <!-- Quadrant labels -->
-          <text x="240" y="45" text-anchor="middle" fill="#7A7A78" font-size="10" font-family="Inter" font-style="italic">Quick Wins</text>
-          <text x="570" y="45" text-anchor="middle" fill="#7A7A78" font-size="10" font-family="Inter" font-style="italic">Strategic Investments</text>
-          <text x="240" y="370" text-anchor="middle" fill="#7A7A78" font-size="10" font-family="Inter" font-style="italic">Minimal Viable</text>
-          <text x="570" y="370" text-anchor="middle" fill="#7A7A78" font-size="10" font-family="Inter" font-style="italic">Over-Engineered</text>
+          <text x="240" y="45" text-anchor="middle" fill="#7A7A78" font-size="10" font-family="Vazirmatn" font-style="italic">بردهای سریع</text>
+          <text x="570" y="45" text-anchor="middle" fill="#7A7A78" font-size="10" font-family="Vazirmatn" font-style="italic">سرمایه‌گذاری‌های استراتژیک</text>
+          <text x="240" y="370" text-anchor="middle" fill="#7A7A78" font-size="10" font-family="Vazirmatn" font-style="italic">حداقل قابل‌قبول</text>
+          <text x="570" y="370" text-anchor="middle" fill="#7A7A78" font-size="10" font-family="Vazirmatn" font-style="italic">بیش‌مهندسی‌شده</text>
 
-          <!-- Axis labels -->
-          <text x="430" y="420" text-anchor="middle" fill="#4A4A48" font-size="11" font-family="Inter" font-weight="600">Implementation Effort (person-weeks) &rarr;</text>
-          <text x="50" y="200" text-anchor="middle" fill="#4A4A48" font-size="11" font-family="Inter" font-weight="600" transform="rotate(-90 50 200)">Capability Delivered &rarr;</text>
+          <text x="430" y="420" text-anchor="middle" fill="#4A4A48" font-size="11" font-family="Vazirmatn" font-weight="600">تلاش پیاده‌سازی (نفر-هفته) &larr;</text>
+          <text x="50" y="200" text-anchor="middle" fill="#4A4A48" font-size="11" font-family="Vazirmatn" font-weight="600" transform="rotate(-90 50 200)">قابلیت ارائه‌شده &uarr;</text>
 
-          <!-- Package points -->
-          <!-- A: ~3 weeks effort, 1 capability block -->
           <circle cx="160" cy="340" r="20" fill="#6B7280" opacity="0.2" stroke="#6B7280" stroke-width="2"/>
-          <text x="160" y="344" text-anchor="middle" fill="#6B7280" font-size="14" font-weight="700" font-family="Inter">A</text>
-          <text x="160" y="310" text-anchor="middle" fill="#4A4A48" font-size="9" font-family="Inter">~3 wks / 1 block</text>
+          <text x="160" y="344" text-anchor="middle" fill="#6B7280" font-size="14" font-weight="700" font-family="Vazirmatn">A</text>
+          <text x="160" y="310" text-anchor="middle" fill="#4A4A48" font-size="9" font-family="Vazirmatn">~۳ هفته / ۱ بلوک</text>
 
-          <!-- B: ~6 weeks effort, 2 blocks -->
           <circle cx="240" cy="280" r="20" fill="#7C6E56" opacity="0.2" stroke="#7C6E56" stroke-width="2"/>
-          <text x="240" y="284" text-anchor="middle" fill="#7C6E56" font-size="14" font-weight="700" font-family="Inter">B</text>
-          <text x="240" y="250" text-anchor="middle" fill="#4A4A48" font-size="9" font-family="Inter">~6 wks / 2 blocks</text>
+          <text x="240" y="284" text-anchor="middle" fill="#7C6E56" font-size="14" font-weight="700" font-family="Vazirmatn">B</text>
+          <text x="240" y="250" text-anchor="middle" fill="#4A4A48" font-size="9" font-family="Vazirmatn">~۶ هفته / ۲ بلوک</text>
 
-          <!-- C: ~12 weeks effort, 4 blocks -->
           <circle cx="480" cy="120" r="22" fill="#2C5282" opacity="0.2" stroke="#2C5282" stroke-width="2"/>
-          <text x="480" y="124" text-anchor="middle" fill="#2C5282" font-size="14" font-weight="700" font-family="Inter">C</text>
-          <text x="480" y="90" text-anchor="middle" fill="#4A4A48" font-size="9" font-family="Inter">~12 wks / 4 blocks</text>
+          <text x="480" y="124" text-anchor="middle" fill="#2C5282" font-size="14" font-weight="700" font-family="Vazirmatn">C</text>
+          <text x="480" y="90" text-anchor="middle" fill="#4A4A48" font-size="9" font-family="Vazirmatn">~۱۲ هفته / ۴ بلوک</text>
 
-          <!-- D: ~3.5 weeks effort, 1 block (add-on) -->
           <circle cx="175" cy="300" r="16" fill="#5B4FA0" opacity="0.2" stroke="#5B4FA0" stroke-width="2" stroke-dasharray="4 3"/>
-          <text x="175" y="304" text-anchor="middle" fill="#5B4FA0" font-size="12" font-weight="700" font-family="Inter">D</text>
-          <text x="215" y="316" fill="#4A4A48" font-size="8" font-family="Inter">(add-on)</text>
+          <text x="175" y="304" text-anchor="middle" fill="#5B4FA0" font-size="12" font-weight="700" font-family="Vazirmatn">D</text>
+          <text x="215" y="316" fill="#4A4A48" font-size="8" font-family="Vazirmatn">(افزودنی)</text>
 
-          <!-- E: ~17 weeks effort, 6 blocks -->
           <circle cx="640" cy="60" r="26" fill="#1A6B4E" opacity="0.2" stroke="#1A6B4E" stroke-width="2.5"/>
-          <text x="640" y="64" text-anchor="middle" fill="#1A6B4E" font-size="16" font-weight="700" font-family="Inter">E</text>
-          <text x="640" y="32" text-anchor="middle" fill="#4A4A48" font-size="9" font-family="Inter">~17 wks / 6 blocks</text>
+          <text x="640" y="64" text-anchor="middle" fill="#1A6B4E" font-size="16" font-weight="700" font-family="Vazirmatn">E</text>
+          <text x="640" y="32" text-anchor="middle" fill="#4A4A48" font-size="9" font-family="Vazirmatn">~۱۷ هفته / ۶ بلوک</text>
         </svg>
         <div class="chart-container__takeaway">
-          <strong>Takeaway:</strong> No package falls in the "Over-Engineered" quadrant. A and B are quick starts with
-          limited scope. C and E are strategic investments with proportionally higher capability.
-          D is a tactical add-on that extends C or E.
+          <strong>نکته کلیدی:</strong> هیچ پکیجی در ناحیه «بیش‌مهندسی‌شده» قرار نمی‌گیرد. A و B شروع سریع با
+          دامنه محدود هستند. C و E سرمایه‌گذاری‌های استراتژیک با قابلیت متناسب بالاتر هستند.
+          D یک افزودنی تاکتیکی است که C یا E را گسترش می‌دهد.
         </div>
       </div>
 
       <!-- MIGRATION PATHS -->
       <div class="mt-xl" data-animate>
-        <h2>Migration Paths</h2>
+        <h2>مسیرهای مهاجرت</h2>
         <p>
-          If you start with a simpler package, upgrading later is possible — but the path
-          depends on the architectural boundary between WordPress (A/B) and custom code (C/D/E).
+          اگر با یک پکیج ساده‌تر شروع کنید، ارتقاء بعدی ممکن است — اما مسیر
+          به مرز معماری بین وردپرس (A/B) و کد سفارشی (C/D/E) بستگی دارد.
         </p>
         <div class="comparison-wrap mt-m">
           <table class="comparison-table" style="min-width: 700px;">
             <thead>
               <tr>
-                <th>From</th>
-                <th>To</th>
-                <th>What Carries Forward</th>
-                <th>What Must Be Rebuilt</th>
-                <th>Additional Effort</th>
+                <th>از</th>
+                <th>به</th>
+                <th>آنچه منتقل می‌شود</th>
+                <th>آنچه باید بازسازی شود</th>
+                <th>تلاش اضافی</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><strong>A</strong> <span class="migration-arrow">&rarr;</span> <strong>C</strong></td>
-                <td>Custom + CRM</td>
-                <td>Product data, brand direction, domain</td>
-                <td>Design, codebase, architecture, admin</td>
-                <td>80–90% of C</td>
+                <td>سفارشی + CRM</td>
+                <td>داده محصول، جهت برند، دامنه</td>
+                <td>طراحی، کدبیس، معماری، پنل مدیریت</td>
+                <td>۸۰–۹۰٪ از C</td>
               </tr>
               <tr>
                 <td><strong>A</strong> <span class="migration-arrow">&rarr;</span> <strong>E</strong></td>
-                <td>Full ecosystem</td>
-                <td>Product data, brand direction, domain</td>
-                <td>Everything else</td>
-                <td>90–95% of E</td>
+                <td>اکوسیستم کامل</td>
+                <td>داده محصول، جهت برند، دامنه</td>
+                <td>همه چیز دیگر</td>
+                <td>۹۰–۹۵٪ از E</td>
               </tr>
               <tr>
                 <td><strong>B</strong> <span class="migration-arrow">&rarr;</span> <strong>C</strong></td>
-                <td>Custom + CRM</td>
-                <td>Product data, design language, categories</td>
-                <td>Codebase, architecture, admin, CRM</td>
-                <td>70–80% of C</td>
+                <td>سفارشی + CRM</td>
+                <td>داده محصول، زبان طراحی، دسته‌بندی‌ها</td>
+                <td>کدبیس، معماری، پنل، CRM</td>
+                <td>۷۰–۸۰٪ از C</td>
               </tr>
               <tr>
                 <td><strong>B</strong> <span class="migration-arrow">&rarr;</span> <strong>E</strong></td>
-                <td>Full ecosystem</td>
-                <td>Product data, design language, categories</td>
-                <td>Codebase, all integrations</td>
-                <td>80–85% of E</td>
+                <td>اکوسیستم کامل</td>
+                <td>داده محصول، زبان طراحی، دسته‌بندی‌ها</td>
+                <td>کدبیس، تمام یکپارچه‌سازی‌ها</td>
+                <td>۸۰–۸۵٪ از E</td>
               </tr>
               <tr style="background: var(--color-pkg-e-light);">
                 <td><strong>C</strong> <span class="migration-arrow">&rarr;</span> <strong>E</strong></td>
-                <td>Full ecosystem</td>
-                <td>Entire codebase, database, admin, basic CRM</td>
-                <td>Extended CRM, bot, dashboard, analytics</td>
-                <td><strong>30–40% on top of C</strong></td>
+                <td>اکوسیستم کامل</td>
+                <td>کل کدبیس، دیتابیس، پنل، CRM پایه</td>
+                <td>CRM توسعه‌یافته، ربات، داشبورد، تحلیل</td>
+                <td><strong>۳۰–۴۰٪ اضافه بر C</strong></td>
               </tr>
             </tbody>
           </table>
         </div>
         <p class="caption mt-s" style="max-width:60ch;">
-          A and B are WordPress-based. C, D, and E are custom-coded. Moving from WordPress to custom
-          is a rebuild, not an upgrade. Moving from C to E is an extension. This is the most important
-          architectural decision.
+          A و B مبتنی بر وردپرس هستند. C، D و E کد سفارشی هستند. انتقال از وردپرس به سفارشی
+          یک بازسازی است، نه ارتقاء. انتقال از C به E یک گسترش است. این مهم‌ترین
+          تصمیم معماری است.
         </p>
       </div>
 
       <div class="cta-block mt-xl" data-animate>
-        <h3>Ready to decide?</h3>
-        <p>Review the system architecture to understand the technical foundation, or proceed to next steps.</p>
-        <a href="architecture.html" class="btn btn--primary btn--lg">View architecture</a>
-        <a href="next-steps.html" class="btn btn--secondary btn--lg">Next steps</a>
+        <h3>آماده تصمیم‌گیری هستید؟</h3>
+        <p>معماری سیستم را بررسی کنید تا بنیان فنی را درک کنید، یا به مراحل بعدی بروید.</p>
+        <a href="architecture.html" class="btn btn--primary btn--lg">مشاهده معماری</a>
+        <a href="next-steps.html" class="btn btn--secondary btn--lg">مراحل بعدی</a>
       </div>
     </div>
   </section>
 
-  <footer class="section" style="padding: var(--space-xl) 0; border-top: 1px solid var(--color-border-light);"><div class="container"><div class="flex flex--between flex--center flex--wrap flex--gap-s"><p class="caption" style="margin:0;">Proposal prepared February 2026</p><p class="caption" style="margin:0;">Version 1.0</p></div></div></footer>
+  <footer class="section" style="padding: var(--space-xl) 0; border-top: 1px solid var(--color-border-light);"><div class="container"><div class="flex flex--between flex--center flex--wrap flex--gap-s"><p class="caption" style="margin:0;">پیشنهاد تهیه شده در بهمن ۱۴۰۴</p><p class="caption" style="margin:0;">نسخه ۱.۰</p></div></div></footer>
   <script src="js/main.js"></script>
 </body>
 </html>

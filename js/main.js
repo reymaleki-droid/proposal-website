@@ -140,7 +140,7 @@
       table.querySelectorAll('.group-header svg').forEach(function (icon) {
         icon.style.transform = 'rotate(180deg)';
       });
-      if (btn) btn.textContent = 'Collapse groups';
+      if (btn) btn.textContent = '\u0628\u0633\u062A\u0646 \u06AF\u0631\u0648\u0647\u200C\u0647\u0627';
     } else {
       // Hide all except first group (scope)
       allRows.forEach(function (row) {
@@ -154,7 +154,7 @@
       // Keep scope chevron rotated
       var scopeHeader = table.querySelector('.group-header[data-group="scope"] svg');
       if (scopeHeader) scopeHeader.style.transform = 'rotate(180deg)';
-      if (btn) btn.textContent = 'Show all attributes';
+      if (btn) btn.textContent = '\u0646\u0645\u0627\u06CC\u0634 \u0647\u0645\u0647 \u0648\u06CC\u0698\u06AF\u06CC\u200C\u0647\u0627';
     }
   };
 
@@ -168,10 +168,10 @@
 
     if (isHighlighted) {
       table.classList.remove('highlight-diff');
-      if (btn) btn.textContent = 'Highlight differences';
+      if (btn) btn.textContent = '\u0628\u0631\u062C\u0633\u062A\u0647\u200C\u0633\u0627\u0632\u06CC \u062A\u0641\u0627\u0648\u062A\u200C\u0647\u0627';
     } else {
       table.classList.add('highlight-diff');
-      if (btn) btn.textContent = 'Clear highlights';
+      if (btn) btn.textContent = '\u067E\u0627\u06A9 \u06A9\u0631\u062F\u0646 \u0628\u0631\u062C\u0633\u062A\u0647\u200C\u0633\u0627\u0632\u06CC';
 
       // For each data row, check if all package cells have the same text
       table.querySelectorAll('.group-row').forEach(function (row) {

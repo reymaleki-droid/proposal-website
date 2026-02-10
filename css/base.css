@@ -11,18 +11,20 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: var(--step-0);
-  line-height: 1.6;
+  line-height: 1.8;
   color: var(--color-text-primary);
   background: var(--color-bg-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+  text-align: right;
 }
 
 /* ---- Typography ---- */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.022em;
@@ -73,7 +75,8 @@ strong { font-weight: 600; }
 
 ul, ol {
   margin-bottom: var(--space-s);
-  padding-left: var(--space-m);
+  padding-right: var(--space-m);
+  padding-left: 0;
 }
 li { margin-bottom: var(--space-2xs); }
 
@@ -93,7 +96,7 @@ table {
 
 th, td {
   padding: var(--space-xs) var(--space-s);
-  text-align: left;
+  text-align: right;
   border-bottom: 1px solid var(--color-border-light);
   font-size: var(--step--1);
 }
