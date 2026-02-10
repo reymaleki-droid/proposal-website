@@ -1,24 +1,28 @@
 /* ============================================================
    ANIMATIONS — Scroll-triggered fade-in, subtle motion
+   Safe default: content is VISIBLE. Only hidden when JS confirms
+   it will handle animations (body.js-ready).
    ============================================================ */
 
-/* Fade-in on scroll */
-[data-animate] {
+/* Fade-in on scroll — only hide when JS is ready to animate */
+body.js-ready [data-animate] {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity var(--transition-smooth), transform var(--transition-smooth);
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 [data-animate].is-visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
-/* Stagger children */
-[data-animate-stagger] > * {
+/* Stagger children — only hide when JS is ready */
+body.js-ready [data-animate-stagger] > * {
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity var(--transition-smooth), transform var(--transition-smooth);
+  transform: translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 [data-animate-stagger].is-visible > *:nth-child(1) { transition-delay: 0ms; }
@@ -26,10 +30,11 @@
 [data-animate-stagger].is-visible > *:nth-child(3) { transition-delay: 160ms; }
 [data-animate-stagger].is-visible > *:nth-child(4) { transition-delay: 240ms; }
 [data-animate-stagger].is-visible > *:nth-child(5) { transition-delay: 320ms; }
+[data-animate-stagger].is-visible > *:nth-child(6) { transition-delay: 400ms; }
 
 [data-animate-stagger].is-visible > * {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 /* Skeleton loading pulse */
@@ -45,13 +50,13 @@
   100% { background-position: -200% 0; }
 }
 
-/* Reduced motion preference */
+/* Reduced motion preference — show everything immediately */
 @media (prefers-reduced-motion: reduce) {
   [data-animate],
   [data-animate-stagger] > * {
-    opacity: 1;
-    transform: none;
-    transition: none;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
   .skeleton { animation: none; }
 }

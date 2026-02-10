@@ -39,6 +39,12 @@
   }
 
   // ── Scroll-Triggered Animations ───────────────────────────────
+  // Signal to CSS that JS will handle animations
+  document.body.classList.add('js-ready');
+
+  var allAnimated = document.querySelectorAll('[data-animate]');
+  var allStaggered = document.querySelectorAll('[data-animate-stagger]');
+
   if ('IntersectionObserver' in window) {
     var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -55,20 +61,21 @@
         rootMargin: '0px 0px -40px 0px'
       });
 
-      document.querySelectorAll('[data-animate]').forEach(function (el) {
+      allAnimated.forEach(function (el) {
+        animateObserver.observe(el);
+      });
+      allStaggered.forEach(function (el) {
         animateObserver.observe(el);
       });
     } else {
       // If reduced motion, make everything visible immediately
-      document.querySelectorAll('[data-animate]').forEach(function (el) {
-        el.classList.add('is-visible');
-      });
+      allAnimated.forEach(function (el) { el.classList.add('is-visible'); });
+      allStaggered.forEach(function (el) { el.classList.add('is-visible'); });
     }
   } else {
     // Fallback: show everything
-    document.querySelectorAll('[data-animate]').forEach(function (el) {
-      el.classList.add('is-visible');
-    });
+    allAnimated.forEach(function (el) { el.classList.add('is-visible'); });
+    allStaggered.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
   // ── Accordion ─────────────────────────────────────────────────
@@ -76,14 +83,14 @@
     trigger.addEventListener('click', function () {
       var item = trigger.closest('.accordion__item');
       var content = item.querySelector('.accordion__content');
-      var isOpen = item.classList.contains('accordion__item--open');
+      var isOpen = item.classList.contains('open');
 
       // Close all other accordion items in the same accordion
       var accordion = item.closest('.accordion');
       if (accordion) {
-        accordion.querySelectorAll('.accordion__item--open').forEach(function (openItem) {
+        accordion.querySelectorAll('.accordion__item.open').forEach(function (openItem) {
           if (openItem !== item) {
-            openItem.classList.remove('accordion__item--open');
+            openItem.classList.remove('open');
             var openContent = openItem.querySelector('.accordion__content');
             if (openContent) openContent.style.maxHeight = null;
           }
@@ -92,10 +99,10 @@
 
       // Toggle current
       if (isOpen) {
-        item.classList.remove('accordion__item--open');
+        item.classList.remove('open');
         content.style.maxHeight = null;
       } else {
-        item.classList.add('accordion__item--open');
+        item.classList.add('open');
         content.style.maxHeight = content.scrollHeight + 'px';
       }
     });

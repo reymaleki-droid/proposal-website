@@ -81,6 +81,18 @@
   .grid--5, .grid--4, .grid--3, .grid--2 {
     grid-template-columns: 1fr;
   }
+  .section {
+    padding: var(--space-xl) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-s);
+  }
+  .section {
+    padding: var(--space-l) 0;
+  }
 }
 
 /* ---- Flex Utilities ---- */

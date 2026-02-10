@@ -71,6 +71,17 @@ a {
 }
 a:hover { color: var(--color-accent-hover); }
 
+/* Focus visible for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 strong { font-weight: 600; }
 
 ul, ol {
@@ -87,6 +98,14 @@ hr {
 }
 
 img { max-width: 100%; height: auto; display: block; }
+
+/* Mobile typography adjustments */
+@media (max-width: 480px) {
+  p, .lead { max-width: 100%; }
+  h1 { font-size: var(--step-4); }
+  h2 { font-size: var(--step-3); }
+  h3 { font-size: var(--step-2); }
+}
 
 table {
   width: 100%;

@@ -74,12 +74,26 @@
     top: 56px;
     left: 0;
     right: 0;
-    background: var(--color-bg-primary);
+    background: var(--color-bg-card);
     border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
     flex-direction: column;
-    padding: var(--space-s) var(--space-m);
+    padding: var(--space-xs) 0;
+    max-height: 80vh;
+    overflow-y: auto;
   }
   .topbar__nav.topbar__nav--open { display: flex; }
+  .topbar__nav a {
+    padding: var(--space-s) var(--space-m);
+    font-size: var(--step-0);
+    border-radius: 0;
+    border-right: 3px solid transparent;
+  }
+  .topbar__nav a:hover,
+  .topbar__nav a.active {
+    border-right-color: var(--color-accent);
+    background: var(--color-accent-light);
+  }
   .topbar__mobile-toggle { display: block; }
 }
 
@@ -156,11 +170,14 @@
   background: var(--color-accent);
   color: var(--color-text-inverse);
   border-color: var(--color-accent);
+  box-shadow: 0 2px 4px rgba(44,82,130,0.25);
 }
 .btn--primary:hover {
   background: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
   color: var(--color-text-inverse);
+  box-shadow: 0 4px 12px rgba(44,82,130,0.3);
+  transform: translateY(-1px);
 }
 
 .btn--secondary {
@@ -193,11 +210,12 @@
   border: 1px solid var(--color-border-light);
   border-radius: var(--border-radius-lg);
   padding: var(--space-l);
-  transition: box-shadow var(--transition-smooth);
+  transition: box-shadow var(--transition-smooth), transform var(--transition-smooth);
 }
 
 .card:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
 }
 
 .card--pkg {
@@ -555,11 +573,12 @@
 
 /* ---- CTA Block ---- */
 .cta-block {
-  background: var(--color-accent-light);
+  background: linear-gradient(135deg, var(--color-accent-light) 0%, #dce8f5 100%);
   border-radius: var(--border-radius-lg);
   padding: var(--space-xl) var(--space-l);
   text-align: center;
   margin: var(--space-2xl) 0;
+  border: 1px solid rgba(44,82,130,0.08);
 }
 
 .cta-block h3 {
@@ -603,8 +622,8 @@
 .tooltip-content {
   position: absolute;
   bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   background: var(--color-bg-dark);
   color: var(--color-text-inverse);
   font-size: var(--step--1);
@@ -685,6 +704,34 @@
   border-radius: 50%;
   background: var(--color-bg-card);
   border: 2px solid var(--color-accent);
+}
+
+/* Phase timeline BEM variant (div-based) */
+.phase-timeline__item {
+  padding-right: var(--space-xl);
+  padding-bottom: var(--space-m);
+  position: relative;
+  margin: 0;
+}
+
+.phase-timeline__dot {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid var(--color-bg-card);
+  box-shadow: 0 0 0 2px var(--color-border-light);
+}
+
+.phase-timeline__content h4 {
+  margin-bottom: var(--space-3xs);
+  font-size: var(--step-0);
+}
+
+.phase-timeline__content .caption {
+  margin-bottom: var(--space-2xs);
 }
 
 .phase-timeline .phase-name {
@@ -789,4 +836,75 @@
   margin: 0 var(--space-2xs);
   color: var(--color-accent);
   font-weight: 700;
+}
+
+/* ---- Mobile Responsive Overrides ---- */
+@media (max-width: 768px) {
+  .stat-row {
+    gap: var(--space-m);
+  }
+  .stat-item {
+    min-width: calc(50% - var(--space-m));
+  }
+  .cta-block {
+    padding: var(--space-l) var(--space-m);
+  }
+  .cta-block .btn {
+    display: block;
+    width: 100%;
+    margin: var(--space-2xs) 0;
+    text-align: center;
+    justify-content: center;
+  }
+  .card {
+    padding: var(--space-m);
+  }
+  .card:hover {
+    transform: none;
+  }
+  .comparison-table {
+    font-size: var(--step--1);
+  }
+  .comparison-table thead th,
+  .comparison-table td {
+    padding: var(--space-2xs) var(--space-xs);
+  }
+  .btn--lg {
+    padding: var(--space-s) var(--space-m);
+    font-size: var(--step--1);
+  }
+  .phase-timeline__item {
+    padding-right: var(--space-l);
+  }
+  .breadcrumb {
+    padding: var(--space-xs) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-row {
+    flex-direction: column;
+    gap: var(--space-s);
+  }
+  .stat-item {
+    min-width: 100%;
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-xs);
+  }
+  .stat-item__value {
+    font-size: var(--step-2);
+  }
+  .cta-block h3 {
+    font-size: var(--step-2);
+  }
+  .topbar__brand {
+    font-size: var(--step--1);
+  }
+  .body-spacer {
+    height: 56px;
+  }
+  .section__label {
+    font-size: 0.7rem;
+  }
 }
